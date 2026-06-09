@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--al-text-color-primary);
+  background: var(--al-bg-color);
+  font-family: var(--al-font-family);
+  font-size: var(--al-font-size-base);
+  font-weight: var(--al-font-weight-primary);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+

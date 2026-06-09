@@ -467,7 +467,7 @@ export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 ```ts
 // button.ts
 export const buttonEmits = {
-  click: (evt: MouseEvent) => evt instanceOf MouseEvent,
+  click: (evt: MouseEvent) => evt instanceof MouseEvent,
 }
 ```
 

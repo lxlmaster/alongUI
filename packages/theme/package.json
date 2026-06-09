@@ -1,0 +1,13 @@
+{
+  "name": "@along-ui/theme",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/index.scss",
+  "style": "src/index.scss",
+  "exports": {
+    ".": "./src/index.scss"
+  },
+  "sideEffects": [
+    "**/*.scss"
+  ]
+}

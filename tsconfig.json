@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "types": ["vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@along-ui/components": ["packages/components/index.ts"],
+      "@along-ui/components/*": ["packages/components/*"],
+      "@along-ui/theme": ["packages/theme/src/index.scss"],
+      "@along-ui/hooks": ["packages/hooks/src/index.ts"],
+      "@along-ui/icons": ["packages/icons/src/index.ts"],
+      "@along-ui/utils": ["packages/utils/src/index.ts"],
+      "along-ui": ["packages/along-ui/src/index.ts"]
+    }
+  },
+  "include": [
+    "packages/**/*.ts",
+    "packages/**/*.vue",
+    "docs/**/*.ts",
+    "docs/**/*.vue",
+    "play/**/*.ts",
+    "play/**/*.vue",
+    "internal/**/*.ts"
+  ]
+}
+

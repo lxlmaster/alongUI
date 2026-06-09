@@ -1,0 +1,77 @@
+:root {
+  --al-color-white: #ffffff;
+  --al-color-black: #000000;
+
+  --al-bg-color: #f5f5f7;
+  --al-bg-color-page: #e8e8ed;
+  --al-bg-color-overlay: #ffffff;
+  --al-bg-color-elevated: #fafafa;
+
+  --al-text-color-primary: #1d1d1f;
+  --al-text-color-regular: #3a3a3c;
+  --al-text-color-secondary: #6e6e73;
+  --al-text-color-placeholder: #aeaeb2;
+  --al-text-color-disabled: #c7c7cc;
+  --al-text-color-inverse: #ffffff;
+
+  --al-border-color: #d2d2d7;
+  --al-border-color-light: #e5e5ea;
+  --al-border-color-lighter: #f2f2f7;
+
+  --al-color-primary: #0071e3;
+  --al-color-primary-hover: #47a3ff;
+  --al-color-primary-light: #b8d8ff;
+  --al-color-primary-dark: #0058b3;
+  --al-color-success: #30d158;
+  --al-color-warning: #ff9f0a;
+  --al-color-danger: #ff453a;
+  --al-color-info: #8e8e93;
+
+  --al-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --al-font-size-base: 14px;
+  --al-font-weight-primary: 400;
+  --al-font-weight-medium: 500;
+  --al-font-weight-bold: 600;
+
+  --al-spacing-1: 4px;
+  --al-spacing-2: 8px;
+  --al-spacing-3: 12px;
+  --al-spacing-4: 16px;
+  --al-spacing-5: 20px;
+  --al-spacing-6: 24px;
+
+  --al-border-radius-small: 6px;
+  --al-border-radius-base: 8px;
+  --al-border-radius-medium: 10px;
+  --al-border-radius-large: 14px;
+  --al-border-radius-circle: 50%;
+
+  --al-box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --al-box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --al-box-shadow-dropdown: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --al-box-shadow-modal: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  --al-transition-duration: 0.3s;
+  --al-transition-duration-fast: 0.2s;
+  --al-transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='dark'] {
+  --al-bg-color: #1c1c1e;
+  --al-bg-color-page: #2c2c2e;
+  --al-bg-color-overlay: #2c2c2e;
+  --al-bg-color-elevated: #3a3a3c;
+
+  --al-text-color-primary: #f5f5f7;
+  --al-text-color-regular: #e5e5ea;
+  --al-text-color-secondary: #aeaeb2;
+  --al-text-color-placeholder: #636366;
+  --al-text-color-disabled: #48484a;
+  --al-text-color-inverse: #1c1c1e;
+
+  --al-border-color: #48484a;
+  --al-border-color-light: #3a3a3c;
+  --al-border-color-lighter: #2c2c2e;
+}
+
