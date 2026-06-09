@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: -apple-system, 'SF Pro Display', sans-serif; padding: 60px; background: #f5f5f7; max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 32px; font-weight: 700; color: #1d1d1f; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .sub { font-size: 15px; color: #6e6e73; margin-top: 0; margin-bottom: 48px; }
+  h2 { font-size: 13px; font-weight: 600; color: #6e6e73; margin: 36px 0 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+  .swatch { flex: 0 0 180px; padding: 16px; border-radius: 12px; font-size: 12px; }
+  .swatch .label { font-weight: 600; margin-bottom: 4px; font-size: 13px; }
+  .swatch .code { font-family: 'SF Mono', 'Consolas', monospace; font-size: 11px; opacity: 0.6; }
+  .light-border { box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
+  .caption { font-size: 12px; color: #6e6e73; margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<h1>alongUI</h1>
+<p class="sub">Apple 设计语言 · 极致洁净 · 高级克制</p>
+
+<h2>背景色</h2>
+<div class="grid">
+  <div class="swatch light-border" style="background:#ffffff;color:#1d1d1f">
+    <div class="label">卡片 / 浮层背景</div>
+    <div class="code">--al-bg-overlay · #ffffff</div>
+  </div>
+  <div class="swatch" style="background:#f5f5f7;color:#1d1d1f">
+    <div class="label">页面主背景</div>
+    <div class="code">--al-bg-page · #f5f5f7</div>
+  </div>
+  <div class="swatch" style="background:#e8e8ed;color:#1d1d1f">
+    <div class="label">页面深一阶</div>
+    <div class="code">--al-bg-secondary · #e8e8ed</div>
+  </div>
+  <div class="swatch" style="background:#1d1d1f;color:#ffffff">
+    <div class="label">暗色背景</div>
+    <div class="code">--al-bg-dark · #1d1d1f</div>
+  </div>
+</div>
+
+<h2>文字色</h2>
+<div class="grid">
+  <div class="swatch" style="background:#1d1d1f;color:#ffffff">
+    <div class="label">标题 / 正文</div>
+    <div class="code">--al-text-primary · #1d1d1f</div>
+  </div>
+  <div class="swatch" style="background:#3a3a3c;color:#ffffff">
+    <div class="label">次要文字</div>
+    <div class="code">--al-text-secondary · #3a3a3c</div>
+  </div>
+  <div class="swatch" style="background:#6e6e73;color:#ffffff">
+    <div class="label">辅助文字</div>
+    <div class="code">--al-text-tertiary · #6e6e73</div>
+  </div>
+  <div class="swatch" style="background:#aeaeb2;color:#1d1d1f">
+    <div class="label">占位符</div>
+    <div class="code">--al-text-placeholder · #aeaeb2</div>
+  </div>
+  <div class="swatch" style="background:#c7c7cc;color:#1d1d1f">
+    <div class="label">禁用</div>
+    <div class="code">--al-text-disabled · #c7c7cc</div>
+  </div>
+</div>
+
+<h2>边框 & 分割</h2>
+<div class="grid">
+  <div class="swatch" style="background:#d2d2d7;color:#1d1d1f">
+    <div class="label">默认边框</div>
+    <div class="code">--al-border · #d2d2d7</div>
+  </div>
+  <div class="swatch" style="background:#e5e5ea;color:#1d1d1f">
+    <div class="label">浅边框</div>
+    <div class="code">--al-border-light · #e5e5ea</div>
+  </div>
+  <div class="swatch light-border" style="background:#f2f2f7;color:#1d1d1f">
+    <div class="label">极浅边框</div>
+    <div class="code">--al-border-lighter · #f2f2f7</div>
+  </div>
+</div>
+
+<h2>主色（Apple 经典蓝）</h2>
+<div class="grid">
+  <div class="swatch" style="background:#0071e3;color:#ffffff">
+    <div class="label">主色 · 苹果蓝</div>
+    <div class="code">--al-color-primary · #0071e3</div>
+  </div>
+  <div class="swatch" style="background:#47a3ff;color:#ffffff">
+    <div class="label">hover</div>
+    <div class="code">--al-primary-hover · #47a3ff</div>
+  </div>
+  <div class="swatch" style="background:#b8d8ff;color:#1d1d1f">
+    <div class="label">浅色背景</div>
+    <div class="code">--al-primary-light · #b8d8ff</div>
+  </div>
+  <div class="swatch" style="background:#0058b3;color:#ffffff">
+    <div class="label">pressed</div>
+    <div class="code">--al-primary-dark · #0058b3</div>
+  </div>
+</div>
+
+<h2>语义色</h2>
+<div class="grid">
+  <div class="swatch" style="background:#30d158;color:#1d1d1f">
+    <div class="label">成功</div>
+    <div class="code">--al-color-success · #30d158</div>
+  </div>
+  <div class="swatch" style="background:#ff9f0a;color:#1d1d1f">
+    <div class="label">警告</div>
+    <div class="code">--al-color-warning · #ff9f0a</div>
+  </div>
+  <div class="swatch" style="background:#ff453a;color:#ffffff">
+    <div class="label">危险</div>
+    <div class="code">--al-color-danger · #ff453a</div>
+  </div>
+  <div class="swatch" style="background:#8e8e93;color:#ffffff">
+    <div class="label">信息</div>
+    <div class="code">--al-color-info · #8e8e93</div>
+  </div>
+</div>
+
+</body>
+</html>
