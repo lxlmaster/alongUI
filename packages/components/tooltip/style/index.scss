@@ -1,10 +1,12 @@
 .al-tooltip {
   position: relative;
-  display: inline-flex;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 .al-tooltip__trigger {
-  display: inline-flex;
+  display: block;
 }
 
 .al-tooltip__popper {
@@ -14,7 +16,7 @@
   padding: 6px 10px;
   border-radius: var(--al-border-radius-small);
   color: var(--al-text-color-inverse);
-  background: rgba(29, 29, 31, 0.94);
+  background: var(--al-tooltip-bg);
   box-shadow: var(--al-box-shadow-light);
   font-size: 12px;
   line-height: 1.5;

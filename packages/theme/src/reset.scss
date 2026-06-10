@@ -24,3 +24,7 @@ select {
   outline: 2px solid var(--al-color-primary);
   outline-offset: 2px;
 }
+
+[data-theme='dark'] *:focus-visible {
+  outline-color: var(--al-text-color-primary);
+}

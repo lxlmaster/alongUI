@@ -54,6 +54,8 @@ Input 用于表单录入，是 alongUI 最重要的基础表单组件之一。
 | maxlength | `number` | `undefined` | 最大输入长度 |
 | showWordLimit | `boolean` | `false` | 是否显示字数统计 |
 
+模板中使用时请写为 `show-word-limit`，对应 Vue 的 kebab-case 写法。
+
 ## Events
 
 | 事件名 | 参数 | 说明 |
@@ -77,4 +79,3 @@ Input 用于表单录入，是 alongUI 最重要的基础表单组件之一。
 - 输入框背景必须使用 `#F5F5F7`，不能使用纯白。
 - 默认高度为 36px，圆角为 6px。
 - focus 边框使用 `#1D1D1F`，不使用蓝色。
-

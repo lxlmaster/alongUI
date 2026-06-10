@@ -1,0 +1,101 @@
+.al-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--al-spacing-2);
+  padding: 0;
+  border: 0;
+  color: var(--al-text-color-secondary);
+  background: transparent;
+  font-family: var(--al-font-family);
+  font-size: var(--al-font-size-callout);
+  line-height: 1;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+}
+
+.al-switch:focus-visible .al-switch__track {
+  outline: 2px solid var(--al-color-primary);
+  outline-offset: 2px;
+}
+
+.al-switch.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.al-switch__track {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 24px;
+  border-radius: var(--al-border-radius-round);
+  background: var(--al-border-color);
+  transition:
+    background-color var(--al-transition-duration-fast) var(--al-transition-function),
+    box-shadow var(--al-transition-duration-fast) var(--al-transition-function);
+}
+
+.al-switch:not(.is-disabled):hover .al-switch__track {
+  background: var(--al-text-color-placeholder);
+}
+
+.al-switch.is-checked .al-switch__track {
+  background: var(--al-color-primary);
+}
+
+.al-switch.is-checked:not(.is-disabled):hover .al-switch__track {
+  background: var(--al-color-primary-hover);
+}
+
+.al-switch__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--al-border-radius-circle);
+  background: var(--al-color-white);
+  box-shadow: var(--al-box-shadow-light);
+  transition:
+    left var(--al-transition-duration-fast) var(--al-transition-function),
+    transform var(--al-transition-duration-fast) var(--al-transition-function);
+}
+
+.al-switch:active:not(.is-disabled) .al-switch__thumb {
+  transform: scale(0.94);
+}
+
+.al-switch.is-checked .al-switch__thumb {
+  left: 22px;
+}
+
+.al-switch__spinner {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--al-border-color);
+  border-top-color: var(--al-color-primary);
+  border-radius: var(--al-border-radius-circle);
+  animation: al-switch-spin 0.8s linear infinite;
+}
+
+.al-switch__text {
+  color: var(--al-text-color-secondary);
+  font-weight: var(--al-font-weight-medium);
+  transition: color var(--al-transition-duration-fast) var(--al-transition-function);
+}
+
+.al-switch.is-checked .al-switch__text--active,
+.al-switch:not(.is-checked) .al-switch__text--inactive {
+  color: var(--al-text-color-primary);
+}
+
+@keyframes al-switch-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
