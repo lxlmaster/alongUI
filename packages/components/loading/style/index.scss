@@ -12,16 +12,12 @@
   justify-content: center;
   gap: var(--al-spacing-3);
   color: var(--al-color-primary);
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--al-overlay-mask-bg);
   backdrop-filter: blur(12px);
 }
 
 .al-loading-mask.is-fullscreen {
   position: fixed;
-}
-
-[data-theme='dark'] .al-loading-mask {
-  background: rgba(28, 28, 30, 0.72);
 }
 
 .al-loading-spinner {

@@ -67,6 +67,8 @@
   --al-box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.06);
   --al-box-shadow-dropdown: 0 4px 12px rgba(0, 0, 0, 0.08);
   --al-box-shadow-modal: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --al-tooltip-bg: rgba(29, 29, 31, 0.94);
+  --al-overlay-mask-bg: rgba(255, 255, 255, 0.72);
 
   --al-z-index-normal: 1;
   --al-z-index-dropdown: 1000;
@@ -90,6 +92,8 @@
   --al-bg-color-elevated: #3a3a3c;
   --al-bg-color-hover: #48484a;
   --al-bg-color-input: #1c1c1e;
+  --al-tooltip-bg: rgba(245, 245, 247, 0.94);
+  --al-overlay-mask-bg: rgba(28, 28, 30, 0.72);
 
   --al-text-color-primary: #f5f5f7;
   --al-text-color-regular: #e5e5ea;

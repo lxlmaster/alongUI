@@ -9,6 +9,7 @@
         <a href="/prototype.html">完整原型</a>
         <a href="#button">Button</a>
         <a href="#input">Input</a>
+        <a href="#switch">Switch</a>
         <a href="#icon">Icon</a>
         <a href="#tooltip">Tooltip</a>
         <a href="#loading">Loading</a>
@@ -22,10 +23,10 @@
       <header class="stage-header">
         <div>
           <p class="eyebrow">Sprint 3</p>
-          <h2>基础反馈与图标能力</h2>
+          <h2>表单基础与反馈能力</h2>
         </div>
         <al-tooltip content="当前工作台展示已注册组件">
-          <al-button type="primary">已注册 5 项</al-button>
+          <al-button type="primary">已注册 6 项</al-button>
         </al-tooltip>
       </header>
 
@@ -84,6 +85,31 @@
             show-word-limit
           />
         </label>
+      </section>
+
+      <section id="switch" class="component-section">
+        <div class="section-title">
+          <p class="eyebrow">Form</p>
+          <h3>Switch</h3>
+        </div>
+        <div class="switch-list">
+          <label>
+            <span>自动保存</span>
+            <al-switch v-model="autoSave" active-text="开启" inactive-text="关闭" />
+          </label>
+          <label>
+            <span>系统通知</span>
+            <al-switch v-model="notificationEnabled" />
+          </label>
+          <label>
+            <span>同步中</span>
+            <al-switch v-model="syncEnabled" loading active-text="同步" inactive-text="暂停" />
+          </label>
+          <label>
+            <span>禁用状态</span>
+            <al-switch v-model="disabledSwitch" disabled active-text="可用" inactive-text="停用" />
+          </label>
+        </div>
       </section>
 
       <section id="icon" class="component-section">
@@ -152,6 +178,10 @@ const panelLoading = ref(false)
 const accountName = ref('张三')
 const accountEmail = ref('zhangsan@example.com')
 const notes = ref('输入框使用页面灰作为背景，不使用白色填充。')
+const autoSave = ref(true)
+const notificationEnabled = ref(false)
+const syncEnabled = ref(true)
+const disabledSwitch = ref(false)
 
 const SearchIcon = {
   render: () =>
@@ -331,7 +361,8 @@ h3 {
 }
 
 .form-grid label,
-.textarea-field {
+.textarea-field,
+.switch-list label {
   display: grid;
   gap: 8px;
   color: var(--al-text-color-secondary);
@@ -344,6 +375,20 @@ h3 {
 
 .icon-row {
   gap: 20px;
+}
+
+.switch-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 16px;
+  max-width: 620px;
+}
+
+.switch-list label {
+  align-items: center;
+  grid-template-columns: minmax(80px, 1fr) auto;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--al-border-color-light);
 }
 
 .loading-demo {
@@ -400,6 +445,10 @@ h3 {
   }
 
   .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .switch-list {
     grid-template-columns: 1fr;
   }
 }
