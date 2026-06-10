@@ -1,0 +1,112 @@
+.al-calendar {
+  display: flex;
+  flex-direction: column;
+  background: var(--al-bg-color, #fff);
+  border-radius: var(--al-border-radius-medium, 8px);
+  overflow: hidden;
+  user-select: none;
+}
+
+.al-calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--al-spacing-4, 16px);
+  border-bottom: 1px solid var(--al-border-color, #e5e5e5);
+}
+
+.al-calendar__title {
+  font-size: var(--al-font-size-body, 14px);
+  font-weight: var(--al-font-weight-semibold, 600);
+  color: var(--al-text-color-primary, #1d1d1f);
+}
+
+.al-calendar__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--al-border-radius-small, 6px);
+  background: transparent;
+  color: var(--al-text-color-primary, #1d1d1f);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.al-calendar__nav-btn:hover {
+  background: var(--al-bg-color-hover, #f5f5f7);
+}
+
+.al-calendar__nav-btn:focus-visible {
+  outline: 2px solid #1d1d1f;
+  outline-offset: 2px;
+}
+
+.al-calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid var(--al-border-color, #e5e5e5);
+}
+
+.al-calendar__weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 12px;
+  color: var(--al-text-color-secondary, #86868b);
+}
+
+.al-calendar__body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.al-calendar__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.al-calendar__day:hover {
+  background: var(--al-bg-color-hover, #f5f5f7);
+}
+
+.al-calendar__day:focus-visible {
+  outline: 2px solid #1d1d1f;
+  outline-offset: -2px;
+}
+
+.al-calendar__day-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: var(--al-font-size-body, 14px);
+  color: var(--al-text-color-primary, #1d1d1f);
+}
+
+.al-calendar__day.is-current-month .al-calendar__day-text {
+  color: var(--al-text-color-primary, #1d1d1f);
+}
+
+.al-calendar__day.is-other-month .al-calendar__day-text {
+  color: var(--al-text-color-disabled, #c7c7cc);
+}
+
+.al-calendar__day.is-today .al-calendar__day-text {
+  font-weight: var(--al-font-weight-semibold, 600);
+  border: 1px solid var(--al-text-color-primary, #1d1d1f);
+}
+
+.al-calendar__day.is-selected .al-calendar__day-text {
+  background: #1d1d1f;
+  color: #fff;
+}

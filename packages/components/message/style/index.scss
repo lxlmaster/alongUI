@@ -1,0 +1,90 @@
+.al-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 320px;
+  max-width: 480px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.04);
+  font-size: 14px;
+  color: #1D1D1F;
+  line-height: 1.5;
+  pointer-events: auto;
+  position: relative;
+  margin: 0 auto;
+  transition: margin-top 0.3s ease;
+}
+
+.al-message--success .al-message__icon {
+  color: #34C759;
+}
+
+.al-message--warning .al-message__icon {
+  color: #FF9500;
+}
+
+.al-message--info .al-message__icon {
+  color: #007AFF;
+}
+
+.al-message--error .al-message__icon {
+  color: #FF3B30;
+}
+
+.al-message__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.al-message__content {
+  flex: 1;
+  word-break: break-word;
+}
+
+.al-message__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #86868B;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.al-message__close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.al-message__close:focus-visible {
+  outline: 2px solid #1D1D1F;
+  outline-offset: 2px;
+}
+
+/* Transition: slide down from top + fade */
+.al-message-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.al-message-fade-leave-active {
+  transition: all 0.25s ease;
+}
+
+.al-message-fade-enter-from {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.al-message-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}

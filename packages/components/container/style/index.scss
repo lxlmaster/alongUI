@@ -1,0 +1,45 @@
+.al-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-basis: auto;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.al-container--vertical {
+  flex-direction: column;
+}
+
+.al-header {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--al-spacing-4, 16px);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.al-aside {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: auto;
+}
+
+.al-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+  padding: var(--al-spacing-4, 16px);
+  overflow: auto;
+}
+
+.al-footer {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--al-spacing-4, 16px);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}

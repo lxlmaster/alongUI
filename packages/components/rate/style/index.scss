@@ -1,0 +1,63 @@
+.al-rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+}
+
+.al-rate.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.al-rate__item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.al-rate__star {
+  position: relative;
+  display: inline-block;
+  color: #E8E8ED;
+  transition: transform 0.1s ease;
+}
+
+.al-rate__item:hover .al-rate__star {
+  transform: scale(1.15);
+}
+
+.al-rate__star-first,
+.al-rate__star-second {
+  display: inline-block;
+  line-height: 1;
+}
+
+.al-rate__star-first {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.al-rate__star.is-half .al-rate__star-first {
+  color: #FFC107;
+}
+
+.al-rate__star.is-full .al-rate__star-second {
+  color: #FFC107;
+}
+
+.al-rate__text {
+  margin-left: 8px;
+  color: #86868B;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}

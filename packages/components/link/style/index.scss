@@ -1,0 +1,53 @@
+.al-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color var(--al-transition-duration-fast) var(--al-transition-function);
+
+  &--default {
+    color: var(--al-text-color-primary);
+
+    &:hover {
+      color: #1D1D1F;
+    }
+  }
+
+  &--primary {
+    color: var(--al-color-primary);
+
+    &:hover {
+      color: var(--al-color-primary-hover);
+    }
+  }
+
+  &.is-underline {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

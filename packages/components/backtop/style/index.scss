@@ -1,0 +1,48 @@
+.al-backtop {
+  position: fixed;
+  z-index: 3100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #1d1d1f;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.al-backtop:hover {
+  background: #3a3a3c;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.al-backtop:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.al-backtop:focus-visible {
+  outline: 2px solid #1d1d1f;
+  outline-offset: 4px;
+}
+
+/* Transition */
+.al-backtop-fade-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.al-backtop-fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.al-backtop-fade-enter-from,
+.al-backtop-fade-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+}

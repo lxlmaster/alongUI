@@ -1,0 +1,50 @@
+/* --- Text --- */
+.al-text {
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color var(--al-transition-duration-fast) var(--al-transition-function);
+
+  &--primary {
+    color: var(--al-text-color-primary);
+  }
+
+  &--secondary {
+    color: var(--al-text-color-secondary);
+  }
+
+  &--disabled {
+    color: var(--al-text-color-disabled);
+  }
+
+  &.is-truncated {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* --- Title --- */
+.al-title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--al-text-color-primary);
+  line-height: 1.3;
+
+  &--1 {
+    font-size: 24px;
+  }
+
+  &--2 {
+    font-size: 20px;
+  }
+
+  &--3 {
+    font-size: 16px;
+  }
+
+  &--4 {
+    font-size: 14px;
+  }
+}

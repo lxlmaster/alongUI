@@ -1,0 +1,56 @@
+.al-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.al-carousel__container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.al-carousel-item {
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+
+.al-carousel--card .al-carousel__container {
+  overflow: visible;
+  justify-content: center;
+}
+
+.al-carousel--card .al-carousel-item {
+  flex-shrink: 0;
+  min-width: 60%;
+}
+
+.al-carousel__indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.al-carousel__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+  padding: 0;
+}
+
+.al-carousel__indicator.is-active {
+  background: #1d1d1f;
+  transform: scale(1.2);
+}
+
+.al-carousel__indicator:focus-visible {
+  outline: 2px solid #1d1d1f;
+  outline-offset: 2px;
+}

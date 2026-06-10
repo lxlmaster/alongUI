@@ -1,0 +1,162 @@
+.al-upload {
+  display: inline-block;
+  font-size: 14px;
+  color: #1D1D1F;
+
+  &.is-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #1D1D1F;
+    outline-offset: 2px;
+  }
+}
+
+.al-upload__trigger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.al-upload__input {
+  display: none;
+}
+
+/* Drag zone */
+.al-upload__drag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 360px;
+  height: 180px;
+  border: 2px dashed #C7C7CC;
+  border-radius: 12px;
+  background: #F5F5F7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &--hover {
+    border-color: #1D1D1F;
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #1D1D1F;
+    outline-offset: 2px;
+  }
+}
+
+.al-upload__drag-icon {
+  color: #86868B;
+}
+
+.al-upload__drag-text {
+  margin: 0;
+  font-size: 14px;
+  color: #86868B;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.al-upload__tip {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #86868B;
+}
+
+/* File list */
+.al-upload__list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.al-upload__file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #F5F5F7;
+  margin-bottom: 6px;
+  font-size: 13px;
+  min-height: 36px;
+
+  &--success {
+    .al-upload__file-status--success {
+      color: #34C759;
+    }
+  }
+
+  &--fail {
+    .al-upload__file-status--fail {
+      color: #FF3B30;
+    }
+  }
+}
+
+.al-upload__file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  color: #1D1D1F;
+}
+
+.al-upload__file-size {
+  color: #86868B;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.al-upload__progress {
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: #E5E5EA;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.al-upload__progress-bar {
+  height: 100%;
+  background: #1D1D1F;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.al-upload__file-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.al-upload__file-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #86868B;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #1D1D1F;
+    outline-offset: 2px;
+  }
+}
