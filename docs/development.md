@@ -31,6 +31,7 @@
 |------|------|------|
 | Button | 已有基础实现 | variants、size、loading、disabled、group |
 | Input | 已有基础实现 | text、password、textarea、clearable、prefix/suffix、字数统计 |
+| Select | 已有基础实现 | 单选、多选、可清空、搜索、允许创建、折叠标签 |
 | Switch | 已有基础实现 | v-model、disabled、loading、activeText/inactiveText |
 | Icon | 已有基础实现 | size、color、默认插槽 |
 | Tooltip | 已有基础实现 | hover、click、focus 触发和四向 placement |

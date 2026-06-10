@@ -1,0 +1,171 @@
+.al-select {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.al-select__trigger {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 36px;
+  padding: 0 32px 0 12px;
+  border: 1px solid var(--al-border-color);
+  border-radius: var(--al-border-radius-small);
+  color: var(--al-text-color-primary);
+  background: var(--al-bg-color-input);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color var(--al-transition-duration-fast) var(--al-transition-function),
+    background-color var(--al-transition-duration-fast) var(--al-transition-function);
+}
+
+.al-select__trigger:hover {
+  background: var(--al-bg-color-hover);
+}
+
+.al-select__trigger:focus-visible {
+  outline: 2px solid var(--al-color-primary);
+  outline-offset: 2px;
+}
+
+.al-select__value {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  min-width: 0;
+  padding: 7px 0;
+}
+
+.al-select__single-value,
+.al-select__placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.al-select__placeholder {
+  color: var(--al-text-color-placeholder);
+}
+
+.al-select__input {
+  width: 100%;
+  border: 0;
+  color: var(--al-text-color-primary);
+  background: transparent;
+  outline: none;
+}
+
+.al-select__tag {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 2px 8px;
+  border-radius: var(--al-border-radius-round);
+  color: var(--al-text-color-primary);
+  background: var(--al-bg-color-overlay);
+  font-size: var(--al-font-size-subhead);
+}
+
+.al-select__tag--counter {
+  color: var(--al-text-color-secondary);
+  background: var(--al-bg-color-hover);
+}
+
+.al-select__arrow,
+.al-select__clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
+
+.al-select__arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid var(--al-text-color-secondary);
+  border-bottom: 1.5px solid var(--al-text-color-secondary);
+  transform: translateY(-60%) rotate(45deg);
+  transition: transform var(--al-transition-duration-fast) var(--al-transition-function);
+}
+
+.al-select.is-open .al-select__arrow {
+  transform: translateY(-35%) rotate(-135deg);
+}
+
+.al-select__clear {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--al-border-radius-round);
+  color: var(--al-text-color-secondary);
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.al-select__clear:hover {
+  color: var(--al-text-color-primary);
+  background: var(--al-border-color-light);
+}
+
+.al-select__dropdown {
+  position: absolute;
+  z-index: var(--al-z-index-dropdown);
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--al-border-color-light);
+  border-radius: var(--al-border-radius-medium);
+  background: var(--al-bg-color-overlay);
+  box-shadow: var(--al-box-shadow-dropdown);
+}
+
+.al-select__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--al-border-radius-small);
+  color: var(--al-text-color-regular);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.al-select__option:hover {
+  background: var(--al-bg-color-hover);
+}
+
+.al-select__option.is-selected {
+  color: var(--al-text-color-primary);
+  background: var(--al-bg-color-page);
+}
+
+.al-select__option.is-disabled,
+.al-select.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.al-select.is-disabled .al-select__trigger {
+  cursor: not-allowed;
+}
+
+.al-select__check,
+.al-select__empty {
+  color: var(--al-text-color-secondary);
+  font-size: var(--al-font-size-callout);
+}
+
+.al-select__empty {
+  padding: 10px 12px;
+  text-align: center;
+}
+

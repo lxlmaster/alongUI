@@ -9,6 +9,7 @@
         <a href="/prototype.html">完整原型</a>
         <a href="#button">Button</a>
         <a href="#input">Input</a>
+        <a href="#select">Select</a>
         <a href="#switch">Switch</a>
         <a href="#icon">Icon</a>
         <a href="#tooltip">Tooltip</a>
@@ -26,7 +27,7 @@
           <h2>表单基础与反馈能力</h2>
         </div>
         <al-tooltip content="当前工作台展示已注册组件">
-          <al-button type="primary">已注册 6 项</al-button>
+          <al-button type="primary">已注册 7 项</al-button>
         </al-tooltip>
       </header>
 
@@ -83,6 +84,44 @@
             placeholder="写一点说明"
             :maxlength="80"
             show-word-limit
+          />
+        </label>
+      </section>
+
+      <section id="select" class="component-section">
+        <div class="section-title">
+          <p class="eyebrow">Form</p>
+          <h3>Select</h3>
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>项目状态</span>
+            <al-select
+              v-model="projectStatus"
+              :options="statusOptions"
+              placeholder="请选择状态"
+              clearable
+            />
+          </label>
+          <label>
+            <span>标签筛选</span>
+            <al-select
+              v-model="projectTags"
+              :options="tagOptions"
+              multiple
+              collapse-tags
+              clearable
+            />
+          </label>
+        </div>
+        <label class="textarea-field">
+          <span>负责人搜索</span>
+          <al-select
+            v-model="ownerValue"
+            :options="ownerOptions"
+            filterable
+            allow-create
+            placeholder="搜索或创建负责人"
           />
         </label>
       </section>
@@ -178,10 +217,28 @@ const panelLoading = ref(false)
 const accountName = ref('张三')
 const accountEmail = ref('zhangsan@example.com')
 const notes = ref('输入框使用页面灰作为背景，不使用白色填充。')
+const projectStatus = ref<string | number | undefined>('progress')
+const projectTags = ref<Array<string | number>>(['design', 'frontend'])
+const ownerValue = ref<string | number | undefined>('along')
 const autoSave = ref(true)
 const notificationEnabled = ref(false)
 const syncEnabled = ref(true)
 const disabledSwitch = ref(false)
+const statusOptions = [
+  { label: '进行中', value: 'progress' },
+  { label: '已完成', value: 'done' },
+  { label: '已归档', value: 'archived' }
+]
+const tagOptions = [
+  { label: '设计', value: 'design' },
+  { label: '前端', value: 'frontend' },
+  { label: '规范', value: 'system' }
+]
+const ownerOptions = [
+  { label: 'along', value: 'along' },
+  { label: 'codex', value: 'codex' },
+  { label: 'reviewer', value: 'reviewer' }
+]
 
 const SearchIcon = {
   render: () =>
