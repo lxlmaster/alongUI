@@ -1,13 +1,13 @@
 import '@along-ui/theme'
-import '@along-ui/components/style/index.scss'
+import '../../components/style/index.scss'
 import { makeInstaller } from '@along-ui/utils'
-import { AlButton, AlButtonGroup } from '@along-ui/components'
+import { AlButton, AlButtonGroup, AlIcon, AlLoading, AlTooltip } from '@along-ui/components'
 
 export * from '@along-ui/components'
 export * from '@along-ui/hooks'
 export * from '@along-ui/icons'
 
-const components = [AlButton, AlButtonGroup]
+const components = [AlButton, AlButtonGroup, AlIcon, AlTooltip, AlLoading]
 const installer = makeInstaller(components)
 
 export default installer

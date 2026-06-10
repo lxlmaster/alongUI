@@ -23,4 +23,13 @@
 5. 在 `packages/components/index.ts` 导出组件。
 6. 在 `packages/along-ui/src/index.ts` 加入全量安装列表。
 7. 在 `docs/components` 新增组件文档。
+8. 在 `play/src/app.vue` 增加至少一个可视化示例，方便走查主题、状态和交互。
 
+## 当前组件进度
+
+| 组件 | 状态 | 说明 |
+|------|------|------|
+| Button | 已有基础实现 | variants、size、loading、disabled、group |
+| Icon | 已有基础实现 | size、color、默认插槽 |
+| Tooltip | 已有基础实现 | hover、click、focus 触发和四向 placement |
+| Loading | 已有基础实现 | `v-loading` 指令与 `LoadingService` |

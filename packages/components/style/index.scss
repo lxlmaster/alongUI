@@ -1,2 +1,4 @@
-@use '../button/style/index';
-
+@use '../button/style/index' as button;
+@use '../icon/style/index' as icon;
+@use '../tooltip/style/index' as tooltip;
+@use '../loading/style/index' as loading;

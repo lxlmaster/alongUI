@@ -13,7 +13,7 @@ alongUI aims to provide Element Plus-like component coverage with a cleaner, res
 
 ## Status
 
-The project is currently in the engineering scaffold stage. The monorepo structure, package boundaries, theme entry, Button component template, play sandbox, and VitePress documentation skeleton have been created.
+The project is currently in the engineering scaffold stage. The monorepo structure, package boundaries, theme entry, Button/Icon/Tooltip/Loading foundations, play sandbox, and VitePress documentation skeleton have been created.
 
 ## Workspace
 

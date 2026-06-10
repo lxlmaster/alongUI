@@ -1,0 +1,61 @@
+.al-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.al-tooltip__trigger {
+  display: inline-flex;
+}
+
+.al-tooltip__popper {
+  position: absolute;
+  z-index: var(--al-z-index-tooltip, 3000);
+  max-width: 240px;
+  padding: 6px 10px;
+  border-radius: var(--al-border-radius-small);
+  color: var(--al-text-color-inverse);
+  background: rgba(29, 29, 31, 0.92);
+  box-shadow: var(--al-box-shadow-dropdown);
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.al-tooltip--top .al-tooltip__popper {
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+}
+
+.al-tooltip--bottom .al-tooltip__popper {
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+}
+
+.al-tooltip--left .al-tooltip__popper {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.al-tooltip--right .al-tooltip__popper {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.al-tooltip-fade-enter-active,
+.al-tooltip-fade-leave-active {
+  transition:
+    opacity var(--al-transition-duration-fast) var(--al-transition-function),
+    scale var(--al-transition-duration-fast) var(--al-transition-function);
+}
+
+.al-tooltip-fade-enter-from,
+.al-tooltip-fade-leave-to {
+  opacity: 0;
+  scale: 0.96;
+}
+

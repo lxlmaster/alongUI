@@ -52,6 +52,15 @@
   --al-box-shadow-dropdown: 0 4px 12px rgba(0, 0, 0, 0.08);
   --al-box-shadow-modal: 0 8px 24px rgba(0, 0, 0, 0.1);
 
+  --al-z-index-normal: 1;
+  --al-z-index-dropdown: 1000;
+  --al-z-index-popper: 2000;
+  --al-z-index-tooltip: 3000;
+  --al-z-index-overlay: 4000;
+  --al-z-index-modal: 5000;
+  --al-z-index-message: 6000;
+  --al-z-index-notification: 7000;
+
   --al-transition-duration: 0.3s;
   --al-transition-duration-fast: 0.2s;
   --al-transition-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,4 +83,3 @@
   --al-border-color-light: #3a3a3c;
   --al-border-color-lighter: #2c2c2e;
 }
-
