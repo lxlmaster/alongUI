@@ -27,7 +27,7 @@
 .al-loading-spinner {
   width: 28px;
   height: 28px;
-  border: 2px solid var(--al-color-primary-light);
+  border: 2px solid var(--al-border-color);
   border-top-color: var(--al-color-primary);
   border-radius: 50%;
   animation: al-loading-rotate 0.8s linear infinite;
@@ -43,4 +43,3 @@
     transform: rotate(360deg);
   }
 }
-

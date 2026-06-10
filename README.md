@@ -13,7 +13,9 @@ alongUI aims to provide Element Plus-like component coverage with a cleaner, res
 
 ## Status
 
-The project is currently in the engineering scaffold stage. The monorepo structure, package boundaries, theme entry, Button/Icon/Tooltip/Loading foundations, play sandbox, and VitePress documentation skeleton have been created.
+The project is currently in the engineering scaffold stage. The monorepo structure, package boundaries, theme entry, Button/Input/Icon/Tooltip/Loading foundations, play sandbox, and VitePress documentation skeleton have been created.
+
+The current visual direction follows `ALONGUI-CODEX-GUIDE.md` and `ALONGUI-APPLE-SPEC.md`: black primary actions, Apple neutral surfaces, 6px control radius, gray input backgrounds, and restrained shadows.
 
 ## Workspace
 

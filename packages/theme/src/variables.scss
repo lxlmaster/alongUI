@@ -4,8 +4,11 @@
 
   --al-bg-color: #f5f5f7;
   --al-bg-color-page: #e8e8ed;
+  --al-bg-color-sidebar: #ebebf0;
   --al-bg-color-overlay: #ffffff;
   --al-bg-color-elevated: #fafafa;
+  --al-bg-color-hover: #e2e2e8;
+  --al-bg-color-input: #f5f5f7;
 
   --al-text-color-primary: #1d1d1f;
   --al-text-color-regular: #3a3a3c;
@@ -18,21 +21,31 @@
   --al-border-color-light: #e5e5ea;
   --al-border-color-lighter: #f2f2f7;
 
-  --al-color-primary: #0071e3;
-  --al-color-primary-hover: #47a3ff;
-  --al-color-primary-light: #b8d8ff;
-  --al-color-primary-dark: #0058b3;
+  --al-color-primary: #1d1d1f;
+  --al-color-primary-hover: #3a3a3c;
+  --al-color-primary-light: #f5f5f7;
+  --al-color-primary-dark: #000000;
   --al-color-success: #30d158;
   --al-color-warning: #ff9f0a;
   --al-color-danger: #ff453a;
-  --al-color-info: #8e8e93;
+  --al-color-info: #007aff;
 
   --al-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
     'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --al-font-size-base: 14px;
+  --al-font-size-title1: 28px;
+  --al-font-size-title2: 22px;
+  --al-font-size-title3: 18px;
+  --al-font-size-headline: 15px;
+  --al-font-size-body: 14px;
+  --al-font-size-callout: 13px;
+  --al-font-size-subhead: 12px;
+  --al-font-size-footnote: 11px;
+  --al-font-size-base: var(--al-font-size-body);
+  --al-font-weight-regular: 400;
   --al-font-weight-primary: 400;
   --al-font-weight-medium: 500;
-  --al-font-weight-bold: 600;
+  --al-font-weight-semibold: 600;
+  --al-font-weight-bold: 700;
 
   --al-spacing-1: 4px;
   --al-spacing-2: 8px;
@@ -41,10 +54,13 @@
   --al-spacing-5: 20px;
   --al-spacing-6: 24px;
 
+  --al-border-radius-xs: 4px;
   --al-border-radius-small: 6px;
-  --al-border-radius-base: 8px;
-  --al-border-radius-medium: 10px;
-  --al-border-radius-large: 14px;
+  --al-border-radius-base: 6px;
+  --al-border-radius-medium: 8px;
+  --al-border-radius-large: 12px;
+  --al-border-radius-xl: 16px;
+  --al-border-radius-round: 999px;
   --al-border-radius-circle: 50%;
 
   --al-box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -69,8 +85,11 @@
 [data-theme='dark'] {
   --al-bg-color: #1c1c1e;
   --al-bg-color-page: #2c2c2e;
+  --al-bg-color-sidebar: #3a3a3c;
   --al-bg-color-overlay: #2c2c2e;
   --al-bg-color-elevated: #3a3a3c;
+  --al-bg-color-hover: #48484a;
+  --al-bg-color-input: #1c1c1e;
 
   --al-text-color-primary: #f5f5f7;
   --al-text-color-regular: #e5e5ea;

@@ -6,7 +6,9 @@
         <h1>组件工作台</h1>
       </div>
       <nav class="nav-list" aria-label="组件列表">
+        <a href="/prototype.html">完整原型</a>
         <a href="#button">Button</a>
+        <a href="#input">Input</a>
         <a href="#icon">Icon</a>
         <a href="#tooltip">Tooltip</a>
         <a href="#loading">Loading</a>
@@ -23,7 +25,7 @@
           <h2>基础反馈与图标能力</h2>
         </div>
         <al-tooltip content="当前工作台展示已注册组件">
-          <al-button type="primary">已注册 4 项</al-button>
+          <al-button type="primary">已注册 5 项</al-button>
         </al-tooltip>
       </header>
 
@@ -53,13 +55,44 @@
         </al-button-group>
       </section>
 
+      <section id="input" class="component-section">
+        <div class="section-title">
+          <p class="eyebrow">Form</p>
+          <h3>Input</h3>
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>姓名</span>
+            <al-input v-model="accountName" placeholder="请输入姓名" clearable />
+          </label>
+          <label>
+            <span>邮箱</span>
+            <al-input v-model="accountEmail" placeholder="name@example.com">
+              <template #prefix>
+                <al-icon :size="14"><MailIcon /></al-icon>
+              </template>
+            </al-input>
+          </label>
+        </div>
+        <label class="textarea-field">
+          <span>备注</span>
+          <al-input
+            v-model="notes"
+            type="textarea"
+            placeholder="写一点说明"
+            :maxlength="80"
+            show-word-limit
+          />
+        </label>
+      </section>
+
       <section id="icon" class="component-section">
         <div class="section-title">
           <p class="eyebrow">Basic</p>
           <h3>Icon</h3>
         </div>
         <div class="icon-row">
-          <al-icon :size="18" color="#0071e3"><SearchIcon /></al-icon>
+          <al-icon :size="18" color="#1d1d1f"><SearchIcon /></al-icon>
           <al-icon :size="24" color="#30d158"><CheckIcon /></al-icon>
           <al-icon :size="28" color="#ff9f0a"><AlertIcon /></al-icon>
         </div>
@@ -100,7 +133,8 @@
       <p class="eyebrow">Tokens</p>
       <h2>当前主题</h2>
       <div class="token-list">
-        <span style="--swatch: var(--al-color-primary)">Primary</span>
+        <span style="--swatch: var(--al-color-primary)">Primary / Black</span>
+        <span style="--swatch: var(--al-color-info)">Info / Blue</span>
         <span style="--swatch: var(--al-color-success)">Success</span>
         <span style="--swatch: var(--al-color-warning)">Warning</span>
         <span style="--swatch: var(--al-color-danger)">Danger</span>
@@ -115,6 +149,9 @@ import { LoadingService } from '@along-ui/components'
 
 const isDark = ref(false)
 const panelLoading = ref(false)
+const accountName = ref('张三')
+const accountEmail = ref('zhangsan@example.com')
+const notes = ref('输入框使用页面灰作为背景，不使用白色填充。')
 
 const SearchIcon = {
   render: () =>
@@ -137,6 +174,14 @@ const AlertIcon = {
       h('path', { d: 'M12 4 21 20H3L12 4Z', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linejoin': 'round' }),
       h('path', { d: 'M12 9v5', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round' }),
       h('circle', { cx: '12', cy: '17', r: '1', fill: 'currentColor' })
+    ])
+}
+
+const MailIcon = {
+  render: () =>
+    h('svg', { viewBox: '0 0 24 24', fill: 'none' }, [
+      h('rect', { x: '4', y: '6', width: '16', height: '12', rx: '2', stroke: 'currentColor', 'stroke-width': '2' }),
+      h('path', { d: 'M5 8l7 5 7-5', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' })
     ])
 }
 
@@ -278,6 +323,25 @@ h3 {
   margin-bottom: 16px;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-grid label,
+.textarea-field {
+  display: grid;
+  gap: 8px;
+  color: var(--al-text-color-secondary);
+  font-size: var(--al-font-size-callout);
+}
+
+.textarea-field {
+  max-width: 560px;
+}
+
 .icon-row {
   gap: 20px;
 }
@@ -333,6 +397,10 @@ h3 {
   .stage-header {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

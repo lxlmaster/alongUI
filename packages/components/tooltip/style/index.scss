@@ -14,8 +14,8 @@
   padding: 6px 10px;
   border-radius: var(--al-border-radius-small);
   color: var(--al-text-color-inverse);
-  background: rgba(29, 29, 31, 0.92);
-  box-shadow: var(--al-box-shadow-dropdown);
+  background: rgba(29, 29, 31, 0.94);
+  box-shadow: var(--al-box-shadow-light);
   font-size: 12px;
   line-height: 1.5;
   white-space: nowrap;
@@ -58,4 +58,3 @@
   opacity: 0;
   scale: 0.96;
 }
-

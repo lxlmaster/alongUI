@@ -30,6 +30,15 @@
 | 组件 | 状态 | 说明 |
 |------|------|------|
 | Button | 已有基础实现 | variants、size、loading、disabled、group |
+| Input | 已有基础实现 | text、password、textarea、clearable、prefix/suffix、字数统计 |
 | Icon | 已有基础实现 | size、color、默认插槽 |
 | Tooltip | 已有基础实现 | hover、click、focus 触发和四向 placement |
 | Loading | 已有基础实现 | `v-loading` 指令与 `LoadingService` |
+
+## Apple 风格红线
+
+- 主色使用 `#1D1D1F`，蓝色只作为 info 语义色。
+- 页面背景使用 `#F5F5F7`，输入框背景同样使用浅灰而不是白色。
+- Button/Input/Tooltip 圆角固定为 6px。
+- Focus 使用黑色 2px outline，不使用蓝色 focus ring。
+- 阴影透明度不得超过 0.1，常规组件不主动加阴影。

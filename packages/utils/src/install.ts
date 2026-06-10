@@ -1,11 +1,13 @@
-import type { App, Plugin } from 'vue'
+import type { App, Component, Plugin } from 'vue'
 
 export type SFCWithInstall<T> = T & Plugin
 
-export function withInstall<T extends { name?: string }>(component: T) {
+export function withInstall<T>(component: T) {
   ;(component as SFCWithInstall<T>).install = (app: App) => {
-    if (component.name) {
-      app.component(component.name, component)
+    const name = (component as { name?: string }).name
+
+    if (name) {
+      app.component(name, component as Component)
     }
   }
 
@@ -21,4 +23,3 @@ export function makeInstaller(components: Plugin[] = []) {
     }
   }
 }
-
