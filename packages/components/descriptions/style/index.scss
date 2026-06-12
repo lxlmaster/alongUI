@@ -1,0 +1,49 @@
+.al-descriptions {
+  box-sizing: border-box;
+}
+
+.al-descriptions__title {
+  margin-bottom: var(--al-spacing-4, 16px);
+  font-size: var(--al-font-size-heading, 18px);
+  font-weight: var(--al-font-weight-semibold, 600);
+  color: var(--al-text-color-primary, #1d1d1f);
+}
+
+.al-descriptions__body {
+  overflow-x: auto;
+}
+
+.al-descriptions__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.al-descriptions__label {
+  padding: 8px var(--al-spacing-4, 16px);
+  font-size: var(--al-font-size-body, 14px);
+  font-weight: var(--al-font-weight-medium, 500);
+  color: var(--al-text-color-secondary, #86868b);
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.al-descriptions__value {
+  padding: 8px var(--al-spacing-4, 16px);
+  font-size: var(--al-font-size-body, 14px);
+  color: var(--al-text-color-primary, #1d1d1f);
+  vertical-align: top;
+}
+
+.al-descriptions--border .al-descriptions__label,
+.al-descriptions--border .al-descriptions__value {
+  border: 1px solid var(--al-border-color, #e5e5e5);
+}
+
+.al-descriptions--border .al-descriptions__label {
+  background: var(--al-bg-color-hover, #f5f5f7);
+}
+
+.al-descriptions__cell--empty {
+  border: none;
+}

@@ -1,0 +1,68 @@
+.al-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  /* --- line --- */
+  &--line {
+    flex-direction: row;
+  }
+
+  &__bar {
+    flex: 1;
+  }
+
+  &__bar-outer {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--al-bg-color-input);
+    overflow: hidden;
+  }
+
+  &__bar-inner {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
+
+  &--small &__bar-outer {
+    height: 4px;
+  }
+
+  &__info {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--al-text-color-secondary);
+    white-space: nowrap;
+  }
+
+  /* --- circle --- */
+  &--circle {
+    display: inline-flex;
+    width: auto;
+  }
+
+  &__circle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__circle-track {
+    stroke: var(--al-bg-color-input);
+  }
+
+  &__circle-path {
+    transition: stroke-dashoffset 0.3s ease, stroke 0.3s ease;
+  }
+
+  &__circle-info {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--al-text-color-primary);
+  }
+}

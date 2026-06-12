@@ -1,6 +1,6 @@
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
-export const buttonTypes = ['default', 'primary', 'success', 'warning', 'danger', 'info'] as const
+export const buttonTypes = ['default', 'primary', 'danger', 'link'] as const
 export const buttonSizes = ['small', 'default', 'large'] as const
 export const buttonNativeTypes = ['button', 'submit', 'reset'] as const
 
@@ -19,9 +19,6 @@ export const buttonProps = {
     default: 'default',
     validator: (value: ButtonSize) => buttonSizes.includes(value)
   },
-  plain: Boolean,
-  round: Boolean,
-  circle: Boolean,
   loading: Boolean,
   disabled: Boolean,
   icon: {
@@ -41,4 +38,3 @@ export const buttonEmits = {
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 export type ButtonEmits = typeof buttonEmits
-

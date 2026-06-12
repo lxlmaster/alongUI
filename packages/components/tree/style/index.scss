@@ -1,0 +1,120 @@
+.al-tree {
+  font-size: 14px;
+  color: var(--al-text-color-primary, #1d1d1f);
+  user-select: none;
+}
+
+.al-tree-node {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+  min-height: 32px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--al-color-primary, #007aff);
+    outline-offset: 2px;
+    opacity: 0.6;
+  }
+
+  &--selected {
+    background-color: var(--al-color-primary, #007aff);
+    color: #ffffff;
+
+    &:hover {
+      background-color: var(--al-color-primary, #007aff);
+    }
+
+    .al-tree-node__label {
+      color: #ffffff;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &--drag-over {
+    background-color: rgba(0, 0, 0, 0.06);
+    outline: 1px dashed var(--al-color-primary, #007aff);
+    outline-offset: -1px;
+  }
+}
+
+.al-tree-node__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #86868B;
+  transition: transform 0.2s ease;
+
+  &--expanded {
+    transform: rotate(90deg);
+  }
+}
+
+.al-tree-node__arrow-placeholder {
+  display: inline-flex;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.al-tree-node__checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 1.5px solid #C7C7CC;
+  border-radius: 4px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-color: var(--al-color-primary, #007aff);
+  }
+
+  &.is-checked {
+    background: var(--al-color-primary, #007aff);
+  color: var(--al-text-color-inverse, #ffffff);
+  }
+
+  &.is-indeterminate {
+    border-color: var(--al-color-primary, #007aff);
+    position: relative;
+  }
+}
+
+.al-tree-node__checkbox-minus {
+  display: block;
+  width: 8px;
+  height: 2px;
+  background: var(--al-color-primary, #007aff);
+  border-radius: 1px;
+}
+
+.al-tree-node__label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--al-text-color-primary, #1d1d1f);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

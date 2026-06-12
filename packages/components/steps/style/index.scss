@@ -1,0 +1,196 @@
+.al-steps {
+  display: flex;
+  font-family: var(--al-font-family);
+  color: var(--al-text-color-primary, #1d1d1f);
+}
+
+.al-steps--horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.al-steps--vertical {
+  flex-direction: column;
+}
+
+/* Step */
+.al-step {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.al-step--horizontal {
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.al-step--vertical {
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: var(--al-spacing-6);
+}
+
+/* Indicator */
+.al-step__indicator {
+  display: flex;
+  align-items: center;
+}
+
+.al-step--horizontal .al-step__indicator {
+  width: 100%;
+  align-items: center;
+}
+
+.al-step--vertical .al-step__indicator {
+  flex-direction: column;
+  align-items: center;
+  min-width: 32px;
+}
+
+/* Circle */
+.al-step__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--al-border-radius-circle);
+  border: 2px solid var(--al-border-color, #d2d2d7);
+  background: var(--al-bg-color-overlay, #ffffff);
+  color: var(--al-text-color-placeholder, #aeaeb2);
+  font-size: var(--al-font-size-callout, 13px);
+  font-weight: var(--al-font-weight-semibold, 600);
+  flex-shrink: 0;
+  transition: border-color var(--al-transition-duration-fast) var(--al-transition-function),
+    background-color var(--al-transition-duration-fast) var(--al-transition-function),
+    color var(--al-transition-duration-fast) var(--al-transition-function);
+}
+
+.al-step--small .al-step__circle {
+  width: 22px;
+  height: 22px;
+  font-size: var(--al-font-size-footnote, 11px);
+}
+
+.al-step--large .al-step__circle {
+  width: 36px;
+  height: 36px;
+  font-size: var(--al-font-size-body, 14px);
+}
+
+.al-step--process .al-step__circle {
+  border-color: var(--al-color-primary, #007aff);
+  background: var(--al-color-primary, #007aff);
+  color: var(--al-text-color-inverse, #ffffff);
+}
+
+.al-step--finish .al-step__circle {
+  border-color: var(--al-color-primary, #007aff);
+  color: var(--al-color-primary, #007aff);
+}
+
+.al-step--wait .al-step__circle {
+  border-color: var(--al-border-color, #d2d2d7);
+  color: var(--al-text-color-placeholder, #aeaeb2);
+}
+
+.al-step__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.al-step__number {
+  line-height: 1;
+}
+
+/* Line */
+.al-step__line {
+  flex: 1;
+  position: relative;
+}
+
+.al-step--horizontal .al-step__line {
+  height: 2px;
+  margin: 0 var(--al-spacing-2);
+  margin-top: -2px;
+  align-self: center;
+}
+
+.al-step--vertical .al-step__line {
+  position: absolute;
+  top: 28px;
+  left: 14px;
+  width: 2px;
+  height: calc(100% - 28px);
+  transform: translateX(-1px);
+}
+
+.al-step__line-inner {
+  height: 100%;
+  width: 100%;
+  background: var(--al-border-color-light, #e5e5ea);
+  transition: background-color var(--al-transition-duration) var(--al-transition-function);
+}
+
+.al-step__line-inner.is-active {
+  background: var(--al-color-primary, #007aff);
+}
+
+/* Content */
+.al-step__content {
+  padding: var(--al-spacing-1) var(--al-spacing-3);
+}
+
+.al-step--vertical .al-step__content {
+  padding: 0 0 0 var(--al-spacing-3);
+}
+
+.al-step__title {
+  font-size: var(--al-font-size-body);
+  font-weight: var(--al-font-weight-medium, 500);
+  color: var(--al-text-color-primary, #1d1d1f);
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.al-step--small .al-step__title {
+  font-size: var(--al-font-size-callout, 13px);
+  line-height: 22px;
+}
+
+.al-step--large .al-step__title {
+  font-size: var(--al-font-size-headline, 15px);
+  line-height: 36px;
+}
+
+.al-step--wait .al-step__title {
+  color: var(--al-text-color-placeholder, #aeaeb2);
+}
+
+.al-step__description {
+  font-size: var(--al-font-size-callout, 13px);
+  color: var(--al-text-color-secondary, #6e6e73);
+  margin-top: var(--al-spacing-1);
+}
+
+.al-step--small .al-step__description {
+  font-size: var(--al-font-size-subhead, 12px);
+}
+
+.al-step--large .al-step__description {
+  font-size: var(--al-font-size-body, 14px);
+}
+
+.al-step--wait .al-step__description {
+  color: var(--al-text-color-disabled, #c7c7cc);
+}
+
+/* Focus visible */
+.al-step:focus-visible {
+  outline: 2px solid var(--al-color-primary, #007aff);
+  outline-offset: 2px;
+  border-radius: var(--al-border-radius-small);
+}

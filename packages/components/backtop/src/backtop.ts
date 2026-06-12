@@ -1,0 +1,18 @@
+import type { ExtractPropTypes } from 'vue'
+
+export const backtopProps = {
+  visibilityHeight: {
+    type: Number,
+    default: 400
+  },
+  right: {
+    type: Number,
+    default: 40
+  },
+  bottom: {
+    type: Number,
+    default: 40
+  }
+} as const
+
+export type BacktopProps = ExtractPropTypes<typeof backtopProps>

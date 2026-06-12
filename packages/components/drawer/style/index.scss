@@ -1,0 +1,149 @@
+.al-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.al-drawer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.06);
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--al-color-primary, #007aff);
+    outline-offset: -2px;
+    opacity: 0.6;
+  }
+}
+
+/* Direction: right-to-left (default) */
+.al-drawer--rtl {
+  right: 0;
+  top: 0;
+  height: 100%;
+  transform: translateX(100%);
+
+  &.al-drawer--open {
+    transform: translateX(0);
+  }
+}
+
+/* Direction: left-to-right */
+.al-drawer--ltr {
+  left: 0;
+  top: 0;
+  height: 100%;
+  transform: translateX(-100%);
+
+  &.al-drawer--open {
+    transform: translateX(0);
+  }
+}
+
+/* Direction: top-to-bottom */
+.al-drawer--ttb {
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+
+  &.al-drawer--open {
+    transform: translateY(0);
+  }
+}
+
+/* Direction: bottom-to-top */
+.al-drawer--btt {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+
+  &.al-drawer--open {
+    transform: translateY(0);
+  }
+}
+
+.al-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.al-drawer__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--al-text-color-primary, #1D1D1F);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.al-drawer__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #86868B;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--al-color-primary, #007aff);
+    outline-offset: 2px;
+    opacity: 0.6;
+  }
+}
+
+.al-drawer__body {
+  padding: 24px;
+  font-size: 14px;
+  color: var(--al-text-color-regular, #3a3a3c);
+  line-height: 1.6;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Overlay transition */
+.al-drawer-fade-enter-active {
+  transition: opacity 0.25s ease;
+}
+
+.al-drawer-fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.al-drawer-fade-enter-from,
+.al-drawer-fade-leave-to {
+  opacity: 0;
+}
+
+/* Drawer slide transition */
+.al-drawer-fade-enter-active .al-drawer {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.al-drawer-fade-leave-active .al-drawer {
+  transition: transform 0.25s ease;
+}

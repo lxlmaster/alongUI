@@ -1,0 +1,199 @@
+.al-table {
+  --al-table-font-size-header: 12px;
+  --al-table-font-size-cell: 13px;
+  --al-table-cell-padding-h: var(--al-spacing-4);
+  --al-table-cell-padding-v: var(--al-spacing-3);
+  --al-table-cell-padding-v-small: var(--al-spacing-2);
+  --al-table-cell-padding-v-large: var(--al-spacing-4);
+  --al-table-header-color: #6e6e73;
+  --al-table-border-color: #f2f2f7;
+  --al-table-row-hover-bg: var(--al-bg-color-elevated, #fafafa);
+
+  position: relative;
+  width: 100%;
+  font-size: var(--al-table-font-size-cell);
+  color: var(--al-text-color-primary);
+
+  &__body-wrapper {
+    overflow-x: auto;
+
+    &--scrollable {
+      overflow-y: auto;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+  }
+
+  &__header {
+    background: transparent;
+  }
+
+  &__header-cell {
+    position: relative;
+    padding: var(--al-table-cell-padding-v) var(--al-table-cell-padding-h);
+    font-size: var(--al-table-font-size-header);
+    font-weight: var(--al-font-weight-bold, 600);
+    color: var(--al-table-header-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+    white-space: nowrap;
+    user-select: none;
+    border-bottom: 1px solid var(--al-table-border-color);
+    background: var(--al-bg-color);
+    cursor: default;
+
+    &[tabindex]:hover {
+      background: var(--al-table-row-hover-bg);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--al-color-primary, #007aff);
+      outline-offset: -2px;
+    }
+  }
+
+  &__header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--al-spacing-1);
+  }
+
+  &__sort-icons {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    margin-left: 4px;
+    gap: 2px;
+  }
+
+  &__sort-icon {
+    display: block;
+    width: 10px;
+    height: 5px;
+    color: var(--al-text-color-placeholder, #aeaeb2);
+    transition: color var(--al-transition-duration-fast, 0.2s);
+
+    &--active {
+      color: var(--al-color-primary, #007aff);
+    }
+  }
+
+  &__body {
+    .al-table__row {
+      transition: background-color var(--al-transition-duration-fast, 0.2s);
+      cursor: pointer;
+
+      &:hover {
+        background: var(--al-table-row-hover-bg);
+      }
+
+      &--highlight {
+        background: var(--al-table-row-hover-bg);
+      }
+
+      &--stripe {
+        background: transparent;
+      }
+    }
+
+    .al-table__row--stripe:nth-child(even) {
+      background: var(--al-table-row-hover-bg);
+    }
+  }
+
+  &__cell {
+    padding: var(--al-table-cell-padding-v) var(--al-table-cell-padding-h);
+    border-bottom: 1px solid var(--al-table-border-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--align-center {
+      text-align: center;
+    }
+
+    &--align-right {
+      text-align: right;
+    }
+
+    &--fixed-left {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      background: inherit;
+    }
+
+    &--fixed-right {
+      position: sticky;
+      right: 0;
+      z-index: 2;
+      background: inherit;
+    }
+  }
+
+  &--border {
+    .al-table__cell {
+      border-right: 1px solid var(--al-table-border-color);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  &--small {
+    .al-table__cell {
+      padding: var(--al-table-cell-padding-v-small) var(--al-table-cell-padding-h);
+    }
+  }
+
+  &--large {
+    .al-table__cell {
+      padding: var(--al-table-cell-padding-v-large) var(--al-table-cell-padding-h);
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    padding: var(--al-spacing-10) var(--al-spacing-4);
+    color: var(--al-text-color-placeholder);
+    font-size: var(--al-font-size-base);
+  }
+
+  &__loading-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: var(--al-z-index-overlay, 4000);
+  }
+
+  &__spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--al-border-color-light, #e5e5ea);
+    border-top-color: var(--al-color-primary, #007aff);
+    border-radius: 50%;
+    animation: al-table-spin 0.6s linear infinite;
+  }
+}
+
+[data-theme='dark'] .al-table {
+  &__loading-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes al-table-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

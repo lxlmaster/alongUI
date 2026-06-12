@@ -1,0 +1,111 @@
+.al-image {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: default;
+}
+
+.al-image--preview {
+  cursor: pointer;
+}
+
+.al-image__img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.al-image__placeholder,
+.al-image__error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--al-text-color-secondary, #86868b);
+  background: var(--al-bg-color-input, #f5f5f7);
+  min-height: 100px;
+}
+
+/* Preview overlay */
+.al-image__preview-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: default;
+}
+
+.al-image__preview-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.al-image__preview-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.al-image__preview-img {
+  max-width: 85vw;
+  max-height: 85vh;
+  object-fit: contain;
+  user-select: none;
+}
+
+.al-image__preview-nav {
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: var(--al-spacing-4, 16px);
+}
+
+.al-image__preview-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.al-image__preview-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.al-image__preview-count {
+  font-size: var(--al-font-size-body, 14px);
+  color: #fff;
+}
+
+.al-image-fade-enter-active,
+.al-image-fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.al-image-fade-enter-from,
+.al-image-fade-leave-to {
+  opacity: 0;
+}

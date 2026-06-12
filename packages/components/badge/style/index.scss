@@ -1,0 +1,35 @@
+.al-badge {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    transform-origin: 100% 0%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--al-color-danger, #ff3b30);
+    border-radius: 9px;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+
+    &.is-dot {
+      min-width: 8px;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border-radius: 50%;
+    }
+  }
+}

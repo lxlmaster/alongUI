@@ -2,107 +2,92 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--al-spacing-1);
-  min-width: 64px;
+  gap: 6px;
   height: 36px;
-  padding: 0 var(--al-spacing-4);
+  padding: 0 16px;
   border: none;
-  border-radius: var(--al-border-radius-small);
+  border-radius: 6px;
   color: var(--al-text-color-primary);
   background: var(--al-bg-color-input);
-  font-size: var(--al-font-size-body);
-  font-weight: var(--al-font-weight-medium);
+  font-family: var(--al-font-family);
+  font-size: 14px;
+  font-weight: var(--al-font-weight-regular);
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
   transition:
-    color var(--al-transition-duration-fast) var(--al-transition-function),
-    background-color var(--al-transition-duration-fast) var(--al-transition-function),
-    border-color var(--al-transition-duration-fast) var(--al-transition-function),
-    box-shadow var(--al-transition-duration-fast) var(--al-transition-function);
+    background-color 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
 }
 
 .al-button:hover {
-  color: var(--al-text-color-primary);
   background: var(--al-bg-color-hover);
 }
 
-.al-button:focus-visible {
-  outline: 2px solid var(--al-color-primary);
-  outline-offset: 2px;
-}
-
+/* Sizes */
 .al-button--small {
-  min-width: 56px;
   height: 28px;
-  padding: 0 var(--al-spacing-3);
+  padding: 0 12px;
   font-size: 13px;
 }
 
 .al-button--large {
-  min-width: 72px;
   height: 44px;
-  padding: 0 var(--al-spacing-5);
+  padding: 0 24px;
   font-size: 15px;
 }
 
-.al-button--primary,
-.al-button--success,
-.al-button--warning,
-.al-button--danger,
-.al-button--info {
-  color: var(--al-text-color-inverse);
-  border-color: transparent;
-}
-
+/* Primary: blue filled + 12px radius (iOS filled button) */
 .al-button--primary {
   background: var(--al-color-primary);
+  color: var(--al-text-color-inverse);
+  border-radius: 12px;
+  font-weight: var(--al-font-weight-semibold);
+  font-size: 15px;
+  padding: 0 20px;
 }
 
 .al-button--primary:hover {
-  color: var(--al-text-color-inverse);
   background: var(--al-color-primary-hover);
 }
 
-.al-button--success {
-  background: var(--al-color-success);
-}
-
-.al-button--warning {
-  background: var(--al-color-warning);
-}
-
+/* Danger: red text button */
 .al-button--danger {
-  background: var(--al-color-danger);
-}
-
-.al-button--info {
-  background: var(--al-color-info);
-}
-
-.al-button.is-plain {
-  color: var(--al-text-color-primary);
   background: transparent;
-  box-shadow: inset 0 0 0 1px var(--al-border-color);
-}
-
-.al-button.is-round {
-  border-radius: var(--al-border-radius-round);
-}
-
-.al-button.is-circle {
-  width: 36px;
-  min-width: 36px;
+  color: var(--al-color-danger);
+  font-weight: var(--al-font-weight-semibold);
   padding: 0;
-  border-radius: var(--al-border-radius-circle);
+  min-width: 0;
 }
 
+.al-button--danger:hover {
+  color: var(--al-color-danger);
+  opacity: 0.8;
+}
+
+/* Link: blue text button */
+.al-button--link {
+  background: transparent;
+  color: var(--al-color-primary);
+  font-weight: var(--al-font-weight-semibold);
+  padding: 0;
+  min-width: 0;
+}
+
+.al-button--link:hover {
+  color: var(--al-color-primary-hover);
+}
+
+/* Disabled & Loading */
 .al-button.is-disabled,
 .al-button.is-loading {
   opacity: 0.4;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
+/* Icon */
 .al-button__icon {
   display: inline-flex;
   width: 1em;
@@ -118,6 +103,7 @@
   animation: al-button-loading 1s linear infinite;
 }
 
+/* Button Group */
 .al-button-group {
   display: inline-flex;
   vertical-align: middle;
@@ -138,7 +124,6 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }

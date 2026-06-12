@@ -1,0 +1,33 @@
+.al-card {
+  border-radius: 8px;
+  border: 1px solid var(--al-border-color);
+  background: var(--al-bg-color);
+  overflow: hidden;
+  transition:
+    box-shadow var(--al-transition-duration-fast) var(--al-transition-function);
+
+  &.is-always-shadow {
+    box-shadow: var(--al-box-shadow-light);
+  }
+
+  &.is-hover-shadow {
+    &:hover {
+      box-shadow: var(--al-box-shadow-light);
+    }
+  }
+
+  &.is-never-shadow {
+    box-shadow: none;
+  }
+
+  &__header {
+    padding: 16px 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--al-text-color-primary);
+  }
+
+  &__body {
+    padding: 16px;
+  }
+}

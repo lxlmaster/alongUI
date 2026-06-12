@@ -1,0 +1,104 @@
+.al-slider {
+  position: relative;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.al-slider.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.al-slider__track {
+  position: relative;
+  height: 4px;
+  border-radius: 2px;
+  background: #e8e8ed;
+  cursor: pointer;
+}
+
+.al-slider__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--al-color-primary, #007aff);
+  transition: width 0.1s ease;
+}
+
+.al-slider__handle {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--al-color-primary, #007aff);
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  outline: none;
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+  z-index: 1;
+}
+
+.al-slider__handle:hover,
+.al-slider__handle:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.al-slider__handle:active {
+  cursor: grabbing;
+  box-shadow: 0 0 0 6px rgba(0, 122, 255, 0.1);
+}
+
+.al-slider__tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--al-color-primary, #007aff);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.al-slider__tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--al-color-primary, #007aff);
+}
+
+.al-slider__marks {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  margin-top: 4px;
+}
+
+.al-slider__mark {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--al-border-color, #d2d2d7);
+  transform: translateX(-50%);
+  transition: background 0.15s ease;
+}
+
+.al-slider__mark.is-active {
+  background: var(--al-color-primary, #007aff);
+}

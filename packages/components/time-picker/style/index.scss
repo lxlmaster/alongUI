@@ -1,0 +1,194 @@
+.al-time-picker {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  min-width: 0;
+  color: var(--al-text-color-primary, #1d1d1f);
+  font-size: 14px;
+}
+
+.al-time-picker.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.al-time-picker.is-disabled .al-time-picker__input {
+  cursor: not-allowed;
+}
+
+.al-time-picker__input-wrap,
+.al-time-picker__range-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.al-time-picker__range-wrap {
+  gap: 0;
+}
+
+.al-time-picker__input {
+  width: 100%;
+  height: 36px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 10px;
+  color: var(--al-text-color-primary, #1d1d1f);
+  background: var(--al-bg-color-input, #f2f2f7);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 36px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.al-time-picker__input::placeholder {
+  color: #8e8e93;
+}
+
+.al-time-picker__input:hover {
+  background: var(--al-bg-color-hover, #e8e8ed);
+}
+
+.al-time-picker__input:focus,
+.al-time-picker.is-open .al-time-picker__input {
+  background: var(--al-bg-color-hover, #e8e8ed);
+}
+
+.al-time-picker__input:focus-visible {
+  background: var(--al-bg-color-hover, #e8e8ed);
+}
+
+.al-time-picker__range-wrap .al-time-picker__input {
+  width: calc(50% - 12px);
+}
+
+.al-time-picker__range-sep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  color: #6e6e73;
+  font-size: 13px;
+  user-select: none;
+}
+
+.al-time-picker__clear {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #6e6e73;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.al-time-picker__clear:hover {
+  color: var(--al-text-color-primary, #1d1d1f);
+  background: #e5e5ea;
+}
+
+/* Dropdown */
+.al-time-picker__dropdown {
+  position: absolute;
+  z-index: 3100;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 160px;
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.al-time-picker__columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  max-height: 220px;
+}
+
+.al-time-picker__column {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 220px;
+  scrollbar-width: thin;
+}
+
+.al-time-picker__column::-webkit-scrollbar {
+  width: 4px;
+}
+
+.al-time-picker__column::-webkit-scrollbar-thumb {
+  background: #d2d2d7;
+  border-radius: 2px;
+}
+
+.al-time-picker__sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 2px;
+  color: #6e6e73;
+  font-size: 16px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.al-time-picker__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 34px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 6px;
+  color: var(--al-text-color-primary, #1d1d1f);
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.al-time-picker__item:hover {
+  background: #f5f5f7;
+}
+
+.al-time-picker__item:focus-visible {
+  outline: 2px solid var(--al-color-primary, #007aff);
+  outline-offset: 2px;
+  opacity: 0.6;
+}
+
+.al-time-picker__item.is-selected {
+  background: var(--al-color-primary, #007aff);
+  color: var(--al-text-color-inverse, #ffffff);
+}
+
+/* Transition */
+.al-time-picker-fade-enter-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.al-time-picker-fade-leave-active {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.al-time-picker-fade-enter-from,
+.al-time-picker-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
