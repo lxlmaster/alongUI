@@ -6,16 +6,17 @@ alongUI aims to provide Element Plus-like component coverage with a cleaner, res
 
 ## Documents
 
-- [Project plan](./ALONGUI-PROJECT-PLAN.md)
-- [Component design](./ALONGUI-COMPONENTS.md)
-- [Design tokens](./ALONGUI-DESIGN-TOKENS.md)
-- [Color preview](./ALONGUI-COLOR-PREVIEW.html)
+- [Project materials index](./project/README.md)
+- [Project plan](./project/planning/ALONGUI-PROJECT-PLAN.md)
+- [Component design](./project/planning/ALONGUI-COMPONENTS.md)
+- [Design tokens](./project/design/ALONGUI-DESIGN-TOKENS.md)
+- [Color preview](./project/design/ALONGUI-COLOR-PREVIEW.html)
 
 ## Status
 
 The project is currently in the engineering scaffold stage. The monorepo structure, package boundaries, theme entry, Button/Input/Icon/Tooltip/Loading foundations, play sandbox, and VitePress documentation skeleton have been created.
 
-The current visual direction follows `ALONGUI-CODEX-GUIDE.md` and `ALONGUI-APPLE-SPEC.md`: black primary actions, Apple neutral surfaces, 6px control radius, gray input backgrounds, and restrained shadows.
+The current visual direction follows `project/engineering/ALONGUI-CODEX-GUIDE.md` and `project/design/ALONGUI-APPLE-SPEC.md`: black primary actions, Apple neutral surfaces, 6px control radius, gray input backgrounds, and restrained shadows.
 
 ## Workspace
 
@@ -30,6 +31,7 @@ packages/
 docs/           VitePress documentation
 play/           Local development sandbox
 internal/       Build and internal tooling config
+project/        Planning, design, engineering, and review materials
 ```
 
 ## Development

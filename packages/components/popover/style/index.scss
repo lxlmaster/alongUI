@@ -22,20 +22,21 @@
     0 8px 32px rgba(0, 0, 0, 0.12),
     0 2px 8px rgba(0, 0, 0, 0.06);
   font-size: 14px;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   line-height: 1.5;
   border: 1px solid rgba(0, 0, 0, 0.04);
 
   &:focus-visible {
-    outline: 2px solid #1D1D1F;
+    outline: 2px solid var(--al-color-primary, #007aff);
     outline-offset: 2px;
+    opacity: 0.6;
   }
 }
 
 .al-popover__title {
   font-size: 15px;
   font-weight: 600;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   margin-bottom: 6px;
 }
 

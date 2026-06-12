@@ -17,10 +17,11 @@
   gap: var(--al-spacing-2, 8px);
   height: 36px;
   padding: 0 var(--al-spacing-3, 12px);
-  border-radius: var(--al-border-radius-small, 6px);
-  background: var(--al-bg-color-input, #f5f5f7);
+  border: none;
+  border-radius: 10px;
+  background: var(--al-bg-color-input, #f2f2f7);
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.15s;
   user-select: none;
 }
 
@@ -29,8 +30,9 @@
 }
 
 .al-cascader__trigger:focus-visible {
-  outline: 2px solid #1d1d1f;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
+  opacity: 0.6;
 }
 
 .al-cascader__label {
@@ -108,8 +110,9 @@
 }
 
 .al-cascader__option:focus-visible {
-  outline: 2px solid #1d1d1f;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: -2px;
+  opacity: 0.6;
 }
 
 .al-cascader__option-label {

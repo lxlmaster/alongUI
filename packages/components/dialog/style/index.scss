@@ -11,23 +11,22 @@
 
 .al-dialog {
   position: relative;
-  width: 520px;
-  margin: 15vh auto 0;
+  width: 440px;
+  margin: 12vh auto 0;
   background: #ffffff;
   border-radius: 12px;
   padding: 24px;
-  box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.08),
-    0 1px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 30vh);
+  max-height: calc(100vh - 24vh);
   outline: none;
 }
 
 .al-dialog:focus-visible {
-  outline: 2px solid #1D1D1F;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
+  opacity: 0.6;
 }
 
 .al-dialog--fullscreen {
@@ -47,7 +46,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0 0 0;
   gap: 12px;
   flex-shrink: 0;
 }
@@ -55,7 +53,7 @@
 .al-dialog__title {
   font-size: 17px;
   font-weight: 600;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1D1D1F);
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -83,14 +81,15 @@
 }
 
 .al-dialog__close:focus-visible {
-  outline: 2px solid #1D1D1F;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
+  opacity: 0.6;
 }
 
 .al-dialog__body {
   padding: 20px 0;
-  font-size: 15px;
-  color: #1D1D1F;
+  font-size: 14px;
+  color: var(--al-text-color-regular, #3A3A3C);
   line-height: 1.6;
   overflow-y: auto;
   flex: 1;
@@ -100,10 +99,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0;
   gap: 8px;
+  padding: 16px 0 0;
   flex-shrink: 0;
-  margin-top: 8px;
 }
 
 /* Transition */
@@ -133,7 +131,6 @@
     opacity: 0;
     transform: scale(0.95) translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -145,7 +142,6 @@
     opacity: 1;
     transform: scale(1) translateY(0);
   }
-
   to {
     opacity: 0;
     transform: scale(0.95) translateY(-10px);

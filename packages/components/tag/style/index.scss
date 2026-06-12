@@ -63,31 +63,30 @@
     }
     &.al-tag--primary {
       color: var(--al-color-primary);
-      background: var(--al-color-primary-light-9);
+      background: var(--al-color-primary-light, #e8f2ff);
     }
     &.al-tag--success {
       color: var(--al-color-success);
-      background: var(--al-color-success-light-9);
+      background: var(--al-color-success-light, #e8f8e8);
     }
     &.al-tag--warning {
       color: var(--al-color-warning);
-      background: var(--al-color-warning-light-9);
+      background: var(--al-color-warning-light, #fff3e0);
     }
     &.al-tag--danger {
       color: var(--al-color-danger);
-      background: var(--al-color-danger-light-9);
+      background: var(--al-color-danger-light, #ffe8e8);
     }
     &.al-tag--info {
       color: var(--al-color-info);
-      background: var(--al-color-info-light-9);
+      background: var(--al-color-info-light, #f0f0f5);
     }
   }
 
   /* --- effect: dark --- */
   &--dark {
     color: #fff;
-    background: #1D1D1F;
-
+    background: var(--al-color-primary, #007aff);
     &.al-tag--primary {
       background: var(--al-color-primary);
     }

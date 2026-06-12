@@ -7,12 +7,12 @@
     box-shadow var(--al-transition-duration-fast) var(--al-transition-function);
 
   &.is-always-shadow {
-    box-shadow: var(--al-shadow-sm);
+    box-shadow: var(--al-box-shadow-light);
   }
 
   &.is-hover-shadow {
     &:hover {
-      box-shadow: var(--al-shadow-sm);
+      box-shadow: var(--al-box-shadow-light);
     }
   }
 

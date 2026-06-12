@@ -706,7 +706,7 @@
 </template>
 
 <script setup lang="ts">
-import { h, reactive, ref } from 'vue'
+import { h, reactive, ref, computed } from 'vue'
 import { ElMessageBox, LoadingService, Message, Notification } from '@along-ui/components'
 
 const isDark = ref(false)
@@ -882,16 +882,10 @@ const MailIcon = {
     ])
 }
 
-const pagedTableData = computedTable()
-
-function computedTable() {
-  return {
-    get value() {
-      const start = (tableCurrentPage.value - 1) * tablePageSize.value
-      return tableData.slice(start, start + tablePageSize.value)
-    }
-  }
-}
+const pagedTableData = computed(() => {
+  const start = (tableCurrentPage.value - 1) * tablePageSize.value
+  return tableData.slice(start, start + tablePageSize.value)
+})
 
 function toggleTheme() {
   isDark.value = !isDark.value

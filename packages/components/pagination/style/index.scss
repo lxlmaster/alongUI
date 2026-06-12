@@ -36,7 +36,7 @@
     background-position: right 8px center;
 
     &:focus-visible {
-      border-color: var(--al-color-primary, #1d1d1f);
+      border-color: var(--al-color-primary, #007aff);
     }
 
     &:disabled {
@@ -67,12 +67,12 @@
     }
 
     &:hover:not(.is-disabled) {
-      border-color: var(--al-color-primary, #1d1d1f);
-      color: var(--al-color-primary, #1d1d1f);
+      border-color: var(--al-color-primary, #007aff);
+      color: var(--al-color-primary, #007aff);
     }
 
     &:focus-visible {
-      outline: 2px solid var(--al-color-primary, #1d1d1f);
+      outline: 2px solid var(--al-color-primary, #007aff);
       outline-offset: 2px;
     }
 
@@ -115,7 +115,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid var(--al-color-primary, #1d1d1f);
+      outline: 2px solid var(--al-color-primary, #007aff);
       outline-offset: 2px;
     }
 
@@ -126,12 +126,12 @@
     }
 
     &.is-active {
-      color: var(--al-color-primary, #1d1d1f);
+      color: var(--al-color-primary, #007aff);
       font-weight: var(--al-font-weight-bold, 600);
       background: transparent;
 
       .al-pagination--background & {
-        background: var(--al-color-primary, #1d1d1f);
+        background: var(--al-color-primary, #007aff);
         color: var(--al-text-color-inverse, #fff);
       }
     }
@@ -160,7 +160,7 @@
     outline: none;
 
     &:focus-visible {
-      border-color: var(--al-color-primary, #1d1d1f);
+      border-color: var(--al-color-primary, #007aff);
     }
 
     &::-webkit-inner-spin-button,

@@ -1,5 +1,8 @@
 # 开发约定
 
+> 面向后续 Agent 的完整组件开发说明见：
+> `project/engineering/ALONGUI-AGENT-DEVELOPMENT-GUIDE.md`
+
 ## 目录职责
 
 | 目录 | 职责 |

@@ -17,8 +17,9 @@
   outline: none;
 
   &:focus-visible {
-    outline: 2px solid #1D1D1F;
+    outline: 2px solid var(--al-color-primary, #007aff);
     outline-offset: -2px;
+    opacity: 0.6;
   }
 }
 
@@ -80,9 +81,9 @@
 }
 
 .al-drawer__title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1D1D1F);
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -109,15 +110,16 @@
   }
 
   &:focus-visible {
-    outline: 2px solid #1D1D1F;
+    outline: 2px solid var(--al-color-primary, #007aff);
     outline-offset: 2px;
+    opacity: 0.6;
   }
 }
 
 .al-drawer__body {
   padding: 24px;
-  font-size: 15px;
-  color: #1D1D1F;
+  font-size: 14px;
+  color: var(--al-text-color-regular, #3a3a3c);
   line-height: 1.6;
   overflow-y: auto;
   flex: 1;

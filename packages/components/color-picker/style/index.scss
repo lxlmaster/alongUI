@@ -21,11 +21,11 @@
   width: 100%;
   min-height: 36px;
   padding: 0 12px;
-  border: 1px solid var(--al-border-color, #D2D2D7);
-  border-radius: 6px;
-  background: #F5F5F7;
+  border: none;
+  border-radius: 10px;
+  background: var(--al-bg-color-input, #f2f2f7);
   cursor: pointer;
-  transition: border-color 0.15s ease;
+  transition: background-color 0.15s ease;
   outline: none;
 }
 
@@ -34,13 +34,11 @@
 }
 
 .al-color-picker__trigger:focus-visible {
-  border-color: #1D1D1F;
-  outline: 2px solid #1D1D1F;
-  outline-offset: 0;
+  background: var(--al-bg-color-hover, #e8e8ed);
 }
 
 .al-color-picker.is-open .al-color-picker__trigger {
-  border-color: #1D1D1F;
+  border-color: var(--al-color-primary, #007aff);
 }
 
 .al-color-picker__color {
@@ -63,7 +61,7 @@
 
 .al-color-picker__label {
   font-size: 14px;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   font-family: inherit;
 }
 
@@ -179,6 +177,7 @@
 }
 
 .al-color-picker__predefine-color.is-active {
-  outline: 2px solid #1D1D1F;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
+  opacity: 0.6;
 }

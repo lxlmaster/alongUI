@@ -31,5 +31,10 @@ Thumbs.db
 
 # Local analysis tools
 .codegraph/
+.code-index/
 .reasonix/
 reasonix.toml
+
+# Docs generated files
+docs/.vitepress/cache/
+docs/.vitepress/dist/

@@ -10,28 +10,29 @@
 
 .al-message-box {
   position: relative;
-  width: 400px;
+  width: 360px;
   background: #ffffff;
   border-radius: 12px;
-  padding: 24px;
-  box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.08),
-    0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 24px 24px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
   display: flex;
   flex-direction: column;
   outline: none;
+  text-align: center;
 }
 
 .al-message-box:focus-visible {
-  outline: 2px solid #1D1D1F;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
+  opacity: 0.6;
 }
 
 .al-message-box__header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .al-message-box__status {
@@ -40,102 +41,97 @@
 }
 
 .al-message-box__status--warning {
-  color: #FF9500;
+  color: var(--al-color-warning, #ff9500);
 }
 
 .al-message-box__title {
   font-size: 17px;
   font-weight: 600;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1D1D1F);
   line-height: 1.4;
 }
 
 .al-message-box__body {
-  margin-bottom: 20px;
+  padding: 0 0 20px;
 }
 
 .al-message-box__message {
-  font-size: 15px;
-  color: #1D1D1F;
+  font-size: 13px;
+  color: var(--al-text-color-secondary, #6e6e73);
   line-height: 1.6;
 }
 
 .al-message-box__input-wrapper {
   margin-top: 12px;
+  text-align: left;
 }
 
 .al-message-box__input {
   width: 100%;
   height: 36px;
   padding: 0 12px;
-  border: 1px solid #D2D2D7;
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
   font-size: 14px;
-  color: #1D1D1F;
-  background: #ffffff;
+  color: var(--al-text-color-primary, #1d1d1f);
+  background: var(--al-bg-color-input, #f2f2f7);
   outline: none;
   box-sizing: border-box;
-  transition: border-color 0.15s ease;
+  transition: background-color 0.15s ease;
 }
 
+.al-message-box__input:hover,
 .al-message-box__input:focus {
-  border-color: #1D1D1F;
-}
-
-.al-message-box__input:focus-visible {
-  outline: 2px solid #1D1D1F;
-  outline-offset: 1px;
+  background: var(--al-bg-color-hover, #e8e8ed);
 }
 
 .al-message-box__input::placeholder {
-  color: #86868B;
+  color: var(--al-text-color-placeholder, #8e8e93);
 }
 
+/* iOS Alert style footer - border-top divider */
 .al-message-box__footer {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
+  align-items: stretch;
+  border-top: 1px solid var(--al-border-color-light, #e5e5ea);
+  margin: 0 -24px;
 }
 
 .al-message-box__btn {
+  flex: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
-  min-width: 72px;
-  padding: 0 16px;
+  height: 44px;
+  padding: 0;
   border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
+  background: transparent;
+  font-family: var(--al-font-family);
+  font-size: 17px;
   cursor: pointer;
-  transition:
-    background 0.15s ease,
-    opacity 0.15s ease;
+  transition: background 0.15s ease;
+  outline: none;
+}
+
+.al-message-box__btn:hover {
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .al-message-box__btn:focus-visible {
-  outline: 2px solid #1D1D1F;
-  outline-offset: 2px;
+  outline: 2px solid var(--al-color-primary, #007aff);
+  outline-offset: -2px;
+  opacity: 0.6;
 }
 
 .al-message-box__btn--cancel {
-  color: #1D1D1F;
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.al-message-box__btn--cancel:hover {
-  background: rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  color: var(--al-color-primary, #007aff);
+  border-right: 1px solid var(--al-border-color-light, #e5e5ea);
 }
 
 .al-message-box__btn--confirm {
-  color: #ffffff;
-  background: #1D1D1F;
-}
-
-.al-message-box__btn--confirm:hover {
-  opacity: 0.85;
+  font-weight: 600;
+  color: var(--al-color-primary, #007aff);
 }
 
 .al-message-box__btn.is-disabled {
@@ -170,7 +166,6 @@
     opacity: 0;
     transform: scale(0.95) translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -182,7 +177,6 @@
     opacity: 1;
     transform: scale(1) translateY(0);
   }
-
   to {
     opacity: 0;
     transform: scale(0.95) translateY(-10px);

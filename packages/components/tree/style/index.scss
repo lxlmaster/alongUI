@@ -1,6 +1,6 @@
 .al-tree {
   font-size: 14px;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   user-select: none;
 }
 
@@ -19,16 +19,17 @@
   }
 
   &:focus-visible {
-    outline: 2px solid #1D1D1F;
-    outline-offset: -2px;
+    outline: 2px solid var(--al-color-primary, #007aff);
+    outline-offset: 2px;
+    opacity: 0.6;
   }
 
   &--selected {
-    background-color: #1D1D1F;
+    background-color: var(--al-color-primary, #007aff);
     color: #ffffff;
 
     &:hover {
-      background-color: #1D1D1F;
+      background-color: var(--al-color-primary, #007aff);
     }
 
     .al-tree-node__label {
@@ -47,7 +48,7 @@
 
   &--drag-over {
     background-color: rgba(0, 0, 0, 0.06);
-    outline: 1px dashed #1D1D1F;
+    outline: 1px dashed var(--al-color-primary, #007aff);
     outline-offset: -1px;
   }
 }
@@ -87,17 +88,16 @@
   transition: all 0.15s ease;
 
   &:hover {
-    border-color: #1D1D1F;
+    border-color: var(--al-color-primary, #007aff);
   }
 
   &.is-checked {
-    background-color: #1D1D1F;
-    border-color: #1D1D1F;
-    color: #ffffff;
+    background: var(--al-color-primary, #007aff);
+  color: var(--al-text-color-inverse, #ffffff);
   }
 
   &.is-indeterminate {
-    border-color: #1D1D1F;
+    border-color: var(--al-color-primary, #007aff);
     position: relative;
   }
 }
@@ -106,14 +106,14 @@
   display: block;
   width: 8px;
   height: 2px;
-  background: #1D1D1F;
+  background: var(--al-color-primary, #007aff);
   border-radius: 1px;
 }
 
 .al-tree-node__label {
   font-size: 14px;
   line-height: 1.5;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

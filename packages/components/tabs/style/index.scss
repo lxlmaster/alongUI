@@ -2,7 +2,7 @@
   display: flex;
   font-family: var(--al-font-family);
   font-size: var(--al-font-size-body);
-  color: var(--al-text-color-primary, #1d1d1f);
+  color: var(--al-text-color-primary, #007aff);
 }
 
 /* Tab positions */
@@ -83,16 +83,16 @@
 }
 
 .al-tabs__item:hover {
-  color: var(--al-text-color-primary, #1d1d1f);
+  color: var(--al-text-color-primary, #007aff);
 }
 
 .al-tabs__item:focus-visible {
-  outline: 2px solid var(--al-color-primary, #1d1d1f);
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: -2px;
 }
 
 .al-tabs__item.is-active {
-  color: var(--al-text-color-primary, #1d1d1f);
+  color: var(--al-text-color-primary, #007aff);
   font-weight: var(--al-font-weight-semibold, 600);
 }
 
@@ -109,7 +109,7 @@
 }
 
 .al-tabs--line .al-tabs__item.is-active {
-  border-bottom-color: var(--al-color-primary, #1d1d1f);
+  border-bottom-color: var(--al-color-primary, #007aff);
 }
 
 /* Card type */
@@ -131,7 +131,7 @@
   bottom: 0;
   left: 0;
   height: 2px;
-  background: var(--al-color-primary, #1d1d1f);
+  background: var(--al-color-primary, #007aff);
   transition: transform var(--al-transition-duration) var(--al-transition-function),
     width var(--al-transition-duration) var(--al-transition-function);
   z-index: 1;
@@ -191,11 +191,11 @@
 
 .al-tabs__add-btn:hover {
   background: var(--al-bg-color-hover, #e2e2e8);
-  color: var(--al-text-color-primary, #1d1d1f);
+  color: var(--al-text-color-primary, #007aff);
 }
 
 .al-tabs__add-btn:focus-visible {
-  outline: 2px solid var(--al-color-primary, #1d1d1f);
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
 }
 

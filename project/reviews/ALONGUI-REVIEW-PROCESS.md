@@ -10,7 +10,7 @@
 
 ### Step 1 · 视觉审查
 
-打开 Codex 的产出（原型页面 / 组件），对照 ALONGUI-APPLE-SPEC.md 逐条检查：
+打开 Codex 的产出（原型页面 / 组件），对照 `../design/ALONGUI-APPLE-SPEC.md` 逐条检查：
 
 ```
 □ 颜色是否全部来自 Apple 色板？
@@ -25,7 +25,7 @@
 ### Step 2 · 功能审查
 
 ```
-□ 组件 Props 是否与 ALONGUI-COMPONENTS.md 一致？
+□ 组件 Props 是否与 `../planning/ALONGUI-COMPONENTS.md` 一致？
 □ v-model 双向绑定是否正常工作？
 □ 禁用态 / loading 态是否正确？
 □ Slots 是否按设计文档实现？
@@ -34,7 +34,7 @@
 
 ### Step 3 · 记录 Review 文档
 
-每次 Review 输出一份 Review Report，存到 `D:\codex\alongUI\reviews\` 目录下。
+每次 Review 输出一份 Review Report，存到 `D:\codex\alongUI\project\reviews\reports\` 目录下。
 
 ---
 

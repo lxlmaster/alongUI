@@ -10,10 +10,10 @@
     color var(--al-transition-duration-fast) var(--al-transition-function);
 
   &--default {
-    color: var(--al-text-color-primary);
+    color: var(--al-text-color-primary, #1d1d1f);
 
     &:hover {
-      color: #1D1D1F;
+      color: var(--al-color-primary, #007aff);
     }
   }
 

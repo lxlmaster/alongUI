@@ -37,7 +37,7 @@
   padding: 0 var(--al-spacing-4);
   margin: 0 var(--al-spacing-1);
   border-radius: var(--al-border-radius-small);
-  color: var(--al-text-color-primary, #1d1d1f);
+  color: var(--al-text-color-primary, #007aff);
   cursor: pointer;
   transition: background-color var(--al-transition-duration-fast) var(--al-transition-function),
     color var(--al-transition-duration-fast) var(--al-transition-function);
@@ -50,12 +50,12 @@
 }
 
 .al-menu-item:focus-visible {
-  outline: 2px solid var(--al-color-primary, #1d1d1f);
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: -2px;
 }
 
 .al-menu-item.is-active {
-  color: var(--al-color-primary, #1d1d1f);
+  color: var(--al-color-primary, #007aff);
   background: var(--al-color-primary-light, #f5f5f7);
   font-weight: var(--al-font-weight-semibold, 600);
 }
@@ -76,7 +76,7 @@
 
 .al-menu--horizontal .al-menu-item.is-active {
   background: transparent;
-  border-bottom-color: var(--al-color-primary, #1d1d1f);
+  border-bottom-color: var(--al-color-primary, #007aff);
 }
 
 .al-menu--vertical.is-collapse .al-menu-item {
@@ -107,7 +107,7 @@
   padding: 0 var(--al-spacing-4);
   margin: 0 var(--al-spacing-1);
   border-radius: var(--al-border-radius-small);
-  color: var(--al-text-color-primary, #1d1d1f);
+  color: var(--al-text-color-primary, #007aff);
   cursor: pointer;
   transition: background-color var(--al-transition-duration-fast) var(--al-transition-function);
   gap: var(--al-spacing-2);
@@ -119,7 +119,7 @@
 }
 
 .al-sub-menu__title:focus-visible {
-  outline: 2px solid var(--al-color-primary, #1d1d1f);
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: -2px;
 }
 

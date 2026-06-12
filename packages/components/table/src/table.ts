@@ -16,11 +16,12 @@ export interface ColumnInfo {
   fixed?: 'left' | 'right'
   sortable?: boolean
   align?: 'left' | 'center' | 'right'
-  renderSlot: Slot | null
+  renderSlot?: any
 }
 
 export interface TableContext {
-  registerColumn: (column: ColumnInfo) => void
+  registerColumn: (column: ColumnInfo, slot?: any) => void
+  slots: Map<string, any>
 }
 
 export const tableContextKey: InjectionKey<TableContext> = Symbol('tableContext')

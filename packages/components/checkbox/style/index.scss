@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   font-size: 14px;
   line-height: 1;
   cursor: pointer;
@@ -38,13 +38,13 @@
 }
 
 .al-checkbox:hover:not(.is-disabled) .al-checkbox__inner {
-  border-color: #1D1D1F;
+  border-color: var(--al-text-color-primary, #1d1d1f);
   background: #E8E8ED;
 }
 
 .al-checkbox.is-checked .al-checkbox__inner {
-  border-color: #1D1D1F;
-  background: #1D1D1F;
+  border-color: var(--al-color-primary, #007aff);
+  background: var(--al-color-primary, #007aff);
 }
 
 .al-checkbox.is-checked:hover:not(.is-disabled) .al-checkbox__inner {
@@ -53,13 +53,14 @@
 }
 
 .al-checkbox.is-indeterminate .al-checkbox__inner {
-  border-color: #1D1D1F;
-  background: #1D1D1F;
+  border-color: var(--al-color-primary, #007aff);
+  background: var(--al-color-primary, #007aff);
 }
 
 .al-checkbox:focus-visible .al-checkbox__inner {
-  outline: 2px solid #1D1D1F;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
+  opacity: 0.6;
 }
 
 .al-checkbox__original {

@@ -1,7 +1,7 @@
 .al-upload {
   display: inline-block;
   font-size: 14px;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1D1D1F);
 
   &.is-disabled {
     opacity: 0.4;
@@ -9,8 +9,9 @@
   }
 
   &:focus-visible {
-    outline: 2px solid #1D1D1F;
+    outline: 2px solid var(--al-color-primary, #007aff);
     outline-offset: 2px;
+    opacity: 0.6;
   }
 }
 
@@ -32,32 +33,33 @@
   gap: 8px;
   width: 360px;
   height: 180px;
-  border: 2px dashed #C7C7CC;
+  border: 2px dashed var(--al-border-color, #d2d2d7);
   border-radius: 12px;
-  background: #F5F5F7;
+  background: var(--al-bg-color-input, #f2f2f7);
   cursor: pointer;
   transition: all 0.2s ease;
 
   &:hover,
   &--hover {
-    border-color: #1D1D1F;
+    border-color: var(--al-color-primary, #007aff);
     background: rgba(0, 0, 0, 0.03);
   }
 
   &:focus-visible {
-    outline: 2px solid #1D1D1F;
+    outline: 2px solid var(--al-color-primary, #007aff);
     outline-offset: 2px;
+    opacity: 0.6;
   }
 }
 
 .al-upload__drag-icon {
-  color: #86868B;
+  color: var(--al-text-color-secondary, #6e6e73);
 }
 
 .al-upload__drag-text {
   margin: 0;
   font-size: 14px;
-  color: #86868B;
+  color: var(--al-text-color-secondary, #6e6e73);
   text-align: center;
   line-height: 1.5;
 }
@@ -65,7 +67,7 @@
 .al-upload__tip {
   margin-top: 8px;
   font-size: 12px;
-  color: #86868B;
+  color: var(--al-text-color-secondary, #6e6e73);
 }
 
 /* File list */
@@ -81,20 +83,20 @@
   gap: 8px;
   padding: 8px 12px;
   border-radius: 8px;
-  background: #F5F5F7;
+  background: var(--al-bg-color-input, #f2f2f7);
   margin-bottom: 6px;
   font-size: 13px;
   min-height: 36px;
 
   &--success {
     .al-upload__file-status--success {
-      color: #34C759;
+      color: var(--al-color-success, #34c759);
     }
   }
 
   &--fail {
     .al-upload__file-status--fail {
-      color: #FF3B30;
+      color: var(--al-color-danger, #ff3b30);
     }
   }
 }
@@ -104,11 +106,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   flex: 1;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1D1D1F);
 }
 
 .al-upload__file-size {
-  color: #86868B;
+  color: var(--al-text-color-secondary, #6e6e73);
   flex-shrink: 0;
   font-size: 12px;
 }
@@ -117,14 +119,14 @@
   width: 80px;
   height: 4px;
   border-radius: 2px;
-  background: #E5E5EA;
+  background: var(--al-border-color-light, #e5e5ea);
   overflow: hidden;
   flex-shrink: 0;
 }
 
 .al-upload__progress-bar {
   height: 100%;
-  background: #1D1D1F;
+  background: var(--al-color-primary, #007aff);
   border-radius: 2px;
   transition: width 0.3s ease;
 }
@@ -146,7 +148,7 @@
   border: none;
   border-radius: 4px;
   background: transparent;
-  color: #86868B;
+  color: var(--al-text-color-secondary, #6e6e73);
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.15s ease;
@@ -156,7 +158,8 @@
   }
 
   &:focus-visible {
-    outline: 2px solid #1D1D1F;
+    outline: 2px solid var(--al-color-primary, #007aff);
     outline-offset: 2px;
+    opacity: 0.6;
   }
 }

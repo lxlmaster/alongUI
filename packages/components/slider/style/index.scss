@@ -14,7 +14,7 @@
   position: relative;
   height: 4px;
   border-radius: 2px;
-  background: #E8E8ED;
+  background: #e8e8ed;
   cursor: pointer;
 }
 
@@ -24,7 +24,7 @@
   left: 0;
   height: 100%;
   border-radius: 2px;
-  background: #1D1D1F;
+  background: var(--al-color-primary, #007aff);
   transition: width 0.1s ease;
 }
 
@@ -33,9 +33,9 @@
   top: 50%;
   width: 16px;
   height: 16px;
-  border: 2px solid #1D1D1F;
+  border: 2px solid var(--al-color-primary, #007aff);
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #ffffff;
   transform: translate(-50%, -50%);
   cursor: grab;
   outline: none;
@@ -47,13 +47,13 @@
 
 .al-slider__handle:hover,
 .al-slider__handle:focus-visible {
-  box-shadow: 0 0 0 4px rgba(29, 29, 31, 0.15);
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15);
   transform: translate(-50%, -50%) scale(1.1);
 }
 
 .al-slider__handle:active {
   cursor: grabbing;
-  box-shadow: 0 0 0 6px rgba(29, 29, 31, 0.1);
+  box-shadow: 0 0 0 6px rgba(0, 122, 255, 0.1);
 }
 
 .al-slider__tooltip {
@@ -63,8 +63,8 @@
   transform: translateX(-50%);
   padding: 4px 8px;
   border-radius: 6px;
-  background: #1D1D1F;
-  color: #FFFFFF;
+  background: var(--al-color-primary, #007aff);
+  color: #ffffff;
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
@@ -78,7 +78,7 @@
   left: 50%;
   transform: translateX(-50%);
   border: 4px solid transparent;
-  border-top-color: #1D1D1F;
+  border-top-color: var(--al-color-primary, #007aff);
 }
 
 .al-slider__marks {
@@ -94,11 +94,11 @@
   width: 2px;
   height: 6px;
   border-radius: 1px;
-  background: #D2D2D7;
+  background: var(--al-border-color, #d2d2d7);
   transform: translateX(-50%);
   transition: background 0.15s ease;
 }
 
 .al-slider__mark.is-active {
-  background: #1D1D1F;
+  background: var(--al-color-primary, #007aff);
 }

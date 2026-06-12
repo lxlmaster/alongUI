@@ -120,14 +120,15 @@ export default defineConfig({
   description: 'Vue 3 企业级 UI 组件库 · Apple 设计语言',
   vite: {
     resolve: {
-      alias: {
-        'along-ui': resolve(__dirname, '../../packages/along-ui/src/index.ts'),
-        '@along-ui/components': resolve(__dirname, '../../packages/components/index.ts'),
-        '@along-ui/theme': resolve(__dirname, '../../packages/theme/src/index.scss'),
-        '@along-ui/hooks': resolve(__dirname, '../../packages/hooks/src/index.ts'),
-        '@along-ui/icons': resolve(__dirname, '../../packages/icons/src/index.ts'),
-        '@along-ui/utils': resolve(__dirname, '../../packages/utils/src/index.ts'),
-      }
+      alias: [
+        { find: 'along-ui', replacement: resolve(__dirname, '../../packages/along-ui/src/index.ts') },
+        { find: '@along-ui/components/style', replacement: resolve(__dirname, '../../packages/components/style/index.scss') },
+        { find: '@along-ui/components', replacement: resolve(__dirname, '../../packages/components/index.ts') },
+        { find: '@along-ui/theme', replacement: resolve(__dirname, '../../packages/theme/src/index.scss') },
+        { find: '@along-ui/hooks', replacement: resolve(__dirname, '../../packages/hooks/src/index.ts') },
+        { find: '@along-ui/icons', replacement: resolve(__dirname, '../../packages/icons/src/index.ts') },
+        { find: '@along-ui/utils', replacement: resolve(__dirname, '../../packages/utils/src/index.ts') }
+      ]
     }
   },
   themeConfig: {

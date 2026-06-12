@@ -10,14 +10,13 @@
   width: 100%;
   min-height: 36px;
   padding: 0 32px 0 12px;
-  border: 1px solid var(--al-border-color);
-  border-radius: var(--al-border-radius-small);
+  border: none;
+  border-radius: 10px;
   color: var(--al-text-color-primary);
   background: var(--al-bg-color-input);
   text-align: left;
   cursor: pointer;
   transition:
-    border-color var(--al-transition-duration-fast) var(--al-transition-function),
     background-color var(--al-transition-duration-fast) var(--al-transition-function);
 }
 
@@ -26,8 +25,7 @@
 }
 
 .al-select__trigger:focus-visible {
-  outline: 2px solid var(--al-color-primary);
-  outline-offset: 2px;
+  background: var(--al-bg-color-hover);
 }
 
 .al-select__value {
@@ -119,7 +117,6 @@
   left: 0;
   width: 100%;
   padding: 8px;
-  border: 1px solid var(--al-border-color-light);
   border-radius: var(--al-border-radius-medium);
   background: var(--al-bg-color-overlay);
   box-shadow: var(--al-box-shadow-dropdown);

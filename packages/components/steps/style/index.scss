@@ -81,14 +81,14 @@
 }
 
 .al-step--process .al-step__circle {
-  border-color: var(--al-color-primary, #1d1d1f);
-  background: var(--al-color-primary, #1d1d1f);
+  border-color: var(--al-color-primary, #007aff);
+  background: var(--al-color-primary, #007aff);
   color: var(--al-text-color-inverse, #ffffff);
 }
 
 .al-step--finish .al-step__circle {
-  border-color: var(--al-color-primary, #1d1d1f);
-  color: var(--al-color-primary, #1d1d1f);
+  border-color: var(--al-color-primary, #007aff);
+  color: var(--al-color-primary, #007aff);
 }
 
 .al-step--wait .al-step__circle {
@@ -136,7 +136,7 @@
 }
 
 .al-step__line-inner.is-active {
-  background: var(--al-color-primary, #1d1d1f);
+  background: var(--al-color-primary, #007aff);
 }
 
 /* Content */
@@ -190,7 +190,7 @@
 
 /* Focus visible */
 .al-step:focus-visible {
-  outline: 2px solid var(--al-color-primary, #1d1d1f);
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
   border-radius: var(--al-border-radius-small);
 }

@@ -1,6 +1,6 @@
 # ▎alongUI 组件设计文档
 
-> 面向 Vue 3 的企业级 UI 组件库 · 像 Element UI 一样全面，像 Apple 一样精致
+> 面向 Vue 3 的企业级 UI 组件库 · 全面开箱即用，iOS 设计基因
 > 技术栈：Vue 3 + TypeScript + Scss + Vite
 
 ---
@@ -70,7 +70,7 @@ interface CommonProps {
 
 ### 1.5 Focus 规范
 
-使用 `:focus-visible` 显示 focus ring（键盘导航时），鼠标点击不显示。
+iOS 风格：不使用黑色 outline。聚焦时输入框背景微深，按钮无聚焦变化。
 
 ---
 
@@ -112,7 +112,7 @@ interface CommonProps {
 
 ### 2.2 Icon 图标
 
-沿用 Element Plus 的图标体系，提供 300+ 个 SVG 图标，支持：
+使用 Lucide 图标库，风格接近 Apple SF Symbols：
 
 ```vue
 <al-icon :size="20" color="#0071e3">

@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   font-size: 14px;
   line-height: 1;
   cursor: pointer;
@@ -38,12 +38,12 @@
 }
 
 .al-radio:hover:not(.is-disabled) .al-radio__inner {
-  border-color: #1D1D1F;
+  border-color: var(--al-color-primary, #007aff);
   background: #E8E8ED;
 }
 
 .al-radio.is-checked .al-radio__inner {
-  border-color: #1D1D1F;
+  border-color: var(--al-color-primary, #007aff);
 }
 
 .al-radio.is-checked:hover:not(.is-disabled) .al-radio__inner {
@@ -51,8 +51,9 @@
 }
 
 .al-radio:focus-visible .al-radio__inner {
-  outline: 2px solid #1D1D1F;
+  outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
+  opacity: 0.6;
 }
 
 .al-radio__original {
@@ -67,7 +68,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #1D1D1F;
+  background: var(--al-color-primary, #007aff);
 }
 
 .al-radio__label {

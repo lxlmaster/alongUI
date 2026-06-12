@@ -40,7 +40,7 @@
 
 .al-form-item__label {
   display: block;
-  color: #1D1D1F;
+  color: var(--al-text-color-primary, #1d1d1f);
   font-weight: 500;
   line-height: 1.4;
   user-select: none;
@@ -57,25 +57,26 @@
 .al-form-item__error {
   font-size: 12px;
   line-height: 1.4;
-  color: #FF453A;
+  color: var(--al-color-danger, #ff3b30);
   animation: al-form-slide-down 0.2s ease;
 }
 
 .al-form-item.is-required > .al-form-item__label::after {
   content: ' *';
-  color: #FF453A;
+  color: var(--al-color-danger, #ff3b30);
 }
 
 .al-form-item.is-error .al-input__inner,
 .al-form-item.is-error .al-select__trigger {
-  border-color: #FF453A;
+  border-color: var(--al-color-danger, #ff3b30);
 }
 
 .al-form-item.is-error .al-input__inner:focus,
 .al-form-item.is-error .al-select__trigger:focus-visible {
-  border-color: #1D1D1F;
-  outline: 2px solid #1D1D1F;
-  outline-offset: 0;
+  border-color: var(--al-color-danger, #ff3b30);
+  outline: 2px solid var(--al-color-danger, #ff3b30);
+  outline-offset: 2px;
+  opacity: 0.6;
 }
 
 .al-form-item.is-disabled {

@@ -15,7 +15,7 @@
 }
 
 .al-switch:focus-visible .al-switch__track {
-  outline: 2px solid var(--al-color-primary);
+  outline: 2px solid rgba(0, 122, 255, 0.4);
   outline-offset: 2px;
 }
 
@@ -31,22 +31,22 @@
   width: 44px;
   height: 24px;
   border-radius: var(--al-border-radius-round);
-  background: var(--al-border-color);
+  background: #e9e9ea;
   transition:
     background-color var(--al-transition-duration-fast) var(--al-transition-function),
     box-shadow var(--al-transition-duration-fast) var(--al-transition-function);
 }
 
 .al-switch:not(.is-disabled):hover .al-switch__track {
-  background: var(--al-text-color-placeholder);
+  background: #dddde0;
 }
 
 .al-switch.is-checked .al-switch__track {
-  background: var(--al-color-primary);
+  background: var(--al-color-success, #34c759);
 }
 
 .al-switch.is-checked:not(.is-disabled):hover .al-switch__track {
-  background: var(--al-color-primary-hover);
+  background: var(--al-color-success-hover, #2db84e);
 }
 
 .al-switch__thumb {
@@ -78,7 +78,7 @@
   width: 12px;
   height: 12px;
   border: 1.5px solid var(--al-border-color);
-  border-top-color: var(--al-color-primary);
+  border-top-color: var(--al-color-success, #34c759);
   border-radius: var(--al-border-radius-circle);
   animation: al-switch-spin 0.8s linear infinite;
 }
