@@ -32,7 +32,6 @@
 .al-cascader__trigger:focus-visible {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
-  opacity: 0.6;
 }
 
 .al-cascader__label {
@@ -112,7 +111,6 @@
 .al-cascader__option:focus-visible {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: -2px;
-  opacity: 0.6;
 }
 
 .al-cascader__option-label {

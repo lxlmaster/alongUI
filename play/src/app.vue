@@ -707,7 +707,7 @@
 
 <script setup lang="ts">
 import { h, reactive, ref, computed } from 'vue'
-import { ElMessageBox, LoadingService, Message, Notification } from '@along-ui/components'
+import { AlMessageBox, LoadingService, Message, Notification } from '@along-ui/components'
 
 const isDark = ref(false)
 const panelLoading = ref(false)
@@ -933,7 +933,7 @@ function showNotification() {
 
 async function showAlertBox() {
   try {
-    await ElMessageBox.confirm('是否确认将当前演示状态作为基线？', '确认')
+    await AlMessageBox.confirm('是否确认将当前演示状态作为基线？', '确认')
     Message.success('已确认当前基线')
   } catch {
     Message.warning('已取消本次确认')

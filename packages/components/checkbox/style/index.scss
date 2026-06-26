@@ -48,8 +48,8 @@
 }
 
 .al-checkbox.is-checked:hover:not(.is-disabled) .al-checkbox__inner {
-  background: #2D2D2F;
-  border-color: #2D2D2F;
+  background: var(--al-color-primary-dark, #0055cc);
+  border-color: var(--al-color-primary-dark, #0055cc);
 }
 
 .al-checkbox.is-indeterminate .al-checkbox__inner {
@@ -60,7 +60,6 @@
 .al-checkbox:focus-visible .al-checkbox__inner {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
-  opacity: 0.6;
 }
 
 .al-checkbox__original {

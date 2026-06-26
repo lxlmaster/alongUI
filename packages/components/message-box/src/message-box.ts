@@ -63,7 +63,7 @@ function createMessageBox(options: MessageBoxOptions): Promise<boolean | string>
   })
 }
 
-export const ElMessageBox = {
+const messageBoxApi = {
   alert(content: string, title?: string, options?: MessageBoxOptions): Promise<boolean> {
     return createMessageBox({
       content,
@@ -99,3 +99,9 @@ export const ElMessageBox = {
     }) as Promise<string>
   }
 }
+
+/** alongUI MessageBox API */
+export const AlMessageBox = messageBoxApi
+
+/** @deprecated Use AlMessageBox instead */
+export const ElMessageBox = messageBoxApi

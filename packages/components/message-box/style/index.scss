@@ -5,7 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .al-message-box {
@@ -24,7 +26,6 @@
 .al-message-box:focus-visible {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
-  opacity: 0.6;
 }
 
 .al-message-box__header {
@@ -120,7 +121,6 @@
 .al-message-box__btn:focus-visible {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: -2px;
-  opacity: 0.6;
 }
 
 .al-message-box__btn--cancel {

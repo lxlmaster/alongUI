@@ -1,6 +1,6 @@
 import type { Component, ExtractPropTypes, PropType } from 'vue'
 
-export const buttonTypes = ['default', 'primary', 'danger', 'link'] as const
+export const buttonTypes = ['default', 'primary', 'success', 'warning', 'danger', 'link'] as const
 export const buttonSizes = ['small', 'default', 'large'] as const
 export const buttonNativeTypes = ['button', 'submit', 'reset'] as const
 

@@ -37,7 +37,7 @@
   padding: 0 var(--al-spacing-4);
   margin: 0 var(--al-spacing-1);
   border-radius: var(--al-border-radius-small);
-  color: var(--al-text-color-primary, #007aff);
+  color: var(--al-text-color-primary);
   cursor: pointer;
   transition: background-color var(--al-transition-duration-fast) var(--al-transition-function),
     color var(--al-transition-duration-fast) var(--al-transition-function);
@@ -55,7 +55,7 @@
 }
 
 .al-menu-item.is-active {
-  color: var(--al-color-primary, #007aff);
+  color: var(--al-text-color-primary);
   background: var(--al-color-primary-light, #f5f5f7);
   font-weight: var(--al-font-weight-semibold, 600);
 }
@@ -107,7 +107,7 @@
   padding: 0 var(--al-spacing-4);
   margin: 0 var(--al-spacing-1);
   border-radius: var(--al-border-radius-small);
-  color: var(--al-text-color-primary, #007aff);
+  color: var(--al-text-color-primary);
   cursor: pointer;
   transition: background-color var(--al-transition-duration-fast) var(--al-transition-function);
   gap: var(--al-spacing-2);

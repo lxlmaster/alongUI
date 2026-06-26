@@ -2,7 +2,7 @@
   display: flex;
   font-family: var(--al-font-family);
   font-size: var(--al-font-size-body);
-  color: var(--al-text-color-primary, #007aff);
+  color: var(--al-text-color-primary);
 }
 
 /* Tab positions */
@@ -83,7 +83,7 @@
 }
 
 .al-tabs__item:hover {
-  color: var(--al-text-color-primary, #007aff);
+  color: var(--al-text-color-primary);
 }
 
 .al-tabs__item:focus-visible {
@@ -92,7 +92,7 @@
 }
 
 .al-tabs__item.is-active {
-  color: var(--al-text-color-primary, #007aff);
+  color: var(--al-text-color-primary);
   font-weight: var(--al-font-weight-semibold, 600);
 }
 
@@ -166,7 +166,6 @@
   height: 18px;
   border-radius: var(--al-border-radius-circle);
   transition: background-color var(--al-transition-duration-fast) var(--al-transition-function);
-  opacity: 0.6;
 }
 
 .al-tabs__close:hover {
@@ -191,7 +190,7 @@
 
 .al-tabs__add-btn:hover {
   background: var(--al-bg-color-hover, #e2e2e8);
-  color: var(--al-text-color-primary, #007aff);
+  color: var(--al-text-color-primary);
 }
 
 .al-tabs__add-btn:focus-visible {

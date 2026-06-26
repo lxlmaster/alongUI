@@ -42,7 +42,6 @@
 .al-calendar__nav-btn:focus-visible {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
-  opacity: 0.6;
 }
 
 .al-calendar__weekdays {
@@ -81,7 +80,6 @@
 .al-calendar__day:focus-visible {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
-  opacity: 0.6;
 }
 
 .al-calendar__day-text {

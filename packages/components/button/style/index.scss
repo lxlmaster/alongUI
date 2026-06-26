@@ -52,6 +52,34 @@
   background: var(--al-color-primary-hover);
 }
 
+/* Success: green filled */
+.al-button--success {
+  background: var(--al-color-success);
+  color: var(--al-text-color-inverse);
+  border-radius: 12px;
+  font-weight: var(--al-font-weight-semibold);
+  font-size: 15px;
+  padding: 0 20px;
+}
+
+.al-button--success:hover {
+  opacity: 0.88;
+}
+
+/* Warning: orange filled */
+.al-button--warning {
+  background: var(--al-color-warning);
+  color: var(--al-text-color-inverse);
+  border-radius: 12px;
+  font-weight: var(--al-font-weight-semibold);
+  font-size: 15px;
+  padding: 0 20px;
+}
+
+.al-button--warning:hover {
+  opacity: 0.88;
+}
+
 /* Danger: red text button */
 .al-button--danger {
   background: transparent;

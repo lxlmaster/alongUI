@@ -47,13 +47,12 @@
 }
 
 .al-radio.is-checked:hover:not(.is-disabled) .al-radio__inner {
-  border-color: #2D2D2F;
+  border-color: var(--al-color-primary-dark, #0055cc);
 }
 
 .al-radio:focus-visible .al-radio__inner {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
-  opacity: 0.6;
 }
 
 .al-radio__original {
@@ -79,6 +78,4 @@
 .al-radio-group {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
+  gap: 12px

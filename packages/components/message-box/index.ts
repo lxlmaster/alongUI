@@ -1,13 +1,13 @@
 import { withInstall } from '@along-ui/utils'
 import MessageBoxVue from './src/message-box.vue'
-import { ElMessageBox } from './src/message-box'
+import { AlMessageBox as messageBoxApi } from './src/message-box'
 
-export const AlMessageBox = withInstall(MessageBoxVue)
+export const AlMessageBoxComponent = withInstall(MessageBoxVue)
 
-;(AlMessageBox as any).alert = ElMessageBox.alert
-;(AlMessageBox as any).confirm = ElMessageBox.confirm
-;(AlMessageBox as any).prompt = ElMessageBox.prompt
+export const AlMessageBox = messageBoxApi
 
-export { ElMessageBox }
+/** @deprecated Use AlMessageBox instead */
+export const ElMessageBox = messageBoxApi
+
 export * from './src/message-box'
 export default AlMessageBox

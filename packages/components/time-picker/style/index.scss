@@ -170,7 +170,6 @@
 .al-time-picker__item:focus-visible {
   outline: 2px solid var(--al-color-primary, #007aff);
   outline-offset: 2px;
-  opacity: 0.6;
 }
 
 .al-time-picker__item.is-selected {
