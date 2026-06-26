@@ -43,13 +43,13 @@ const inputRef = ref<HTMLInputElement>()
 
 const checkboxGroup = inject(checkboxGroupKey, null)
 
-const checkboxDisabled = computed(() => props.disabled || checkboxGroup?.disabled || false)
+const checkboxDisabled = computed(() => props.disabled || checkboxGroup?.disabled.value || false)
 
 const isChecked = computed(() => {
   if (checkboxGroup) {
     const label = props.label
     if (label !== undefined) {
-      return checkboxGroup.modelValue.includes(label)
+      return checkboxGroup.modelValue.value.includes(label)
     }
     return false
   }

@@ -15,7 +15,7 @@
           :aria-label="title"
           tabindex="-1"
           @click.stop
-          @keydown.escape="handleCancel"
+          @keydown.escape="handleEscape"
         >
           <div class="al-message-box__header">
             <span v-if="type === 'warning'" class="al-message-box__status al-message-box__status--warning">
@@ -153,6 +153,12 @@ function handleConfirm() {
 function handleCancel() {
   emit('cancel')
   close()
+}
+
+function handleEscape() {
+  if (props.closeOnPressEscape) {
+    handleCancel()
+  }
 }
 
 function handleOverlayClick() {

@@ -40,11 +40,11 @@ const inputRef = ref<HTMLInputElement>()
 
 const radioGroup = inject(radioGroupKey, null)
 
-const radioDisabled = computed(() => props.disabled || radioGroup?.disabled || false)
+const radioDisabled = computed(() => props.disabled || radioGroup?.disabled.value || false)
 
 const isChecked = computed(() => {
   if (radioGroup) {
-    return radioGroup.modelValue === props.label
+    return radioGroup.modelValue.value === props.label
   }
   return props.modelValue === props.label
 })

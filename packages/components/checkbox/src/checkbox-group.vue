@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { provide } from 'vue'
+import { provide, toRef } from 'vue'
 import { checkboxGroupEmits, checkboxGroupKey, checkboxGroupProps, type CheckboxContext } from './checkbox'
 
 defineOptions({
@@ -31,8 +31,8 @@ function toggleValue(value: string | number | boolean) {
 }
 
 const context: CheckboxContext = {
-  modelValue: props.modelValue,
-  disabled: props.disabled,
+  modelValue: toRef(props, 'modelValue'),
+  disabled: toRef(props, 'disabled'),
   toggleValue
 }
 

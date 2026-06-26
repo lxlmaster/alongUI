@@ -34,7 +34,6 @@ function createMessage(options: MessageOptions): MessageHandler {
     const oldest = instances.shift()
     if (oldest) {
       oldest.close()
-      oldest.container.remove()
     }
   }
 
