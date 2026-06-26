@@ -78,7 +78,6 @@ const props = withDefaults(defineProps<{
   closeOnPressEscape?: boolean
   showClose?: boolean
   draggable?: boolean
-  destroyOnClose?: boolean
 }>(), {
   modelValue: false,
   title: '',
@@ -88,8 +87,7 @@ const props = withDefaults(defineProps<{
   closeOnClickModal: true,
   closeOnPressEscape: true,
   showClose: true,
-  draggable: false,
-  destroyOnClose: false
+  draggable: false
 })
 
 const emit = defineEmits<{
@@ -113,10 +111,7 @@ const isDragging = ref(false)
 const startX = ref(0)
 const startY = ref(0)
 
-const shouldRender = computed(() => {
-  if (props.destroyOnClose) return isMounted.value
-  return isMounted.value || isOpen.value
-})
+const shouldRender = computed(() => isMounted.value || isOpen.value)
 
 const dialogStyle = computed(() => {
   const style: Record<string, string> = {}
@@ -204,9 +199,7 @@ function handleHeaderMousedown(event: MouseEvent) {
 }
 
 function onAfterLeave() {
-  if (props.destroyOnClose) {
-    isMounted.value = false
-  }
+  isMounted.value = false
   emit('closed')
 }
 

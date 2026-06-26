@@ -72,10 +72,7 @@ const drawerRef = ref<HTMLElement | null>(null)
 const isOpen = ref(false)
 const isMounted = ref(false)
 
-const shouldRender = computed(() => {
-  if (props.destroyOnClose) return isMounted.value
-  return isMounted.value || isOpen.value
-})
+const shouldRender = computed(() => isMounted.value || isOpen.value)
 
 const drawerStyle = computed(() => {
   const style: Record<string, string> = {}
@@ -123,9 +120,7 @@ function handleOverlayClick(event: MouseEvent) {
 }
 
 function handleAfterLeave() {
-  if (props.destroyOnClose) {
-    isMounted.value = false
-  }
+  isMounted.value = false
   emit('closed')
 }
 

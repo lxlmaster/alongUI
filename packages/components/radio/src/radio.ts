@@ -1,8 +1,8 @@
-import type { ExtractPropTypes, InjectionKey, PropType } from 'vue'
+import type { ExtractPropTypes, InjectionKey, PropType, Ref } from 'vue'
 
 export interface RadioContext {
-  modelValue: string | number | boolean
-  disabled: boolean
+  modelValue: Ref<string | number | boolean>
+  disabled: Ref<boolean>
   selectValue: (value: string | number | boolean) => void
 }
 

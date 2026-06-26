@@ -1,0 +1,155 @@
+.al-timeline {
+  position: relative;
+  padding: 0;
+}
+
+.al-timeline-item {
+  position: relative;
+  display: flex;
+  gap: 0;
+  min-height: 60px;
+  padding-bottom: 24px;
+
+  &:last-child {
+    padding-bottom: 0;
+
+    .al-timeline-item__tail {
+      display: none;
+    }
+  }
+
+  // ---------- Tail ----------
+  &__tail {
+    position: absolute;
+    left: 11px;
+    top: 18px;
+    bottom: -4px;
+    width: 2px;
+    background: var(--al-border-color-light, #e5e5ea);
+  }
+
+  // ---------- Node ----------
+  &__node {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-top: 2px;
+
+    &--default {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--large {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    flex-shrink: 0;
+  }
+
+  // ---------- Timestamp ----------
+  &__timestamp {
+    flex-shrink: 0;
+    font-size: 13px;
+    color: var(--al-text-color-secondary, #86868b);
+    line-height: 1.4;
+    min-width: 80px;
+
+    &--left {
+      margin-right: 16px;
+      text-align: right;
+    }
+
+    &--right {
+      margin-left: 16px;
+      text-align: left;
+    }
+  }
+
+  // ---------- Content ----------
+  &__content {
+    flex: 1;
+    font-size: 14px;
+    color: var(--al-text-color-primary, #1d1d1f);
+    line-height: 1.5;
+    margin-left: 12px;
+    min-width: 0;
+  }
+
+  // ---------- Types ----------
+  &--primary &__node {
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  &--success &__node {
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  &--warning &__node {
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  &--danger &__node {
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  &--info &__node {
+    border-width: 2px;
+    border-style: solid;
+  }
+}
+
+// ---------- Alternate placement ----------
+.al-timeline--alternate {
+  .al-timeline-item {
+    &:nth-child(odd) {
+      flex-direction: row;
+
+      .al-timeline-item__timestamp--left {
+        order: -1;
+        margin-right: 16px;
+        margin-left: 0;
+      }
+
+      .al-timeline-item__content {
+        margin-left: 12px;
+        text-align: left;
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .al-timeline-item__timestamp--right {
+        order: 1;
+        margin-left: 16px;
+        margin-right: 0;
+        text-align: left;
+      }
+
+      .al-timeline-item__content {
+        margin-right: 12px;
+        margin-left: 0;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -53,6 +53,11 @@ import { AlLink } from '@along-ui/components'
 import { AlText, AlTitle } from '@along-ui/components'
 import { AlAffix } from '@along-ui/components'
 import { AlBacktop } from '@along-ui/components'
+import { AlResult } from '@along-ui/components'
+import { AlTimeline, AlTimelineItem } from '@along-ui/components'
+import { AlGuide } from '@along-ui/components'
+import { AlSearchTable } from '@along-ui/components'
+import { vInfiniteScroll } from '@along-ui/components'
 
 export * from '@along-ui/components'
 export * from '@along-ui/hooks'
@@ -73,6 +78,7 @@ const components = [
   AlContainer, AlHeader, AlAside, AlMain, AlFooter,
   AlStack, AlGrid, AlCenter, AlSpacer, AlPage, AlDivider,
   AlAvatar, AlCard, AlLink, AlText, AlTitle, AlAffix, AlBacktop,
+  AlResult, AlTimeline, AlTimelineItem, AlGuide, AlSearchTable,
 ]
 
 const installer = makeInstaller(components)

@@ -1,0 +1,128 @@
+.al-guide {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.al-guide-fade-enter-active,
+.al-guide-fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.al-guide-fade-enter-from,
+.al-guide-fade-leave-to {
+  opacity: 0;
+}
+
+.al-guide__mask {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+
+.al-guide__spotlight {
+  position: fixed;
+  z-index: 10001;
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 9999px var(--al-guide-mask-color, rgba(0, 0, 0, 0.5)),
+    0 8px 32px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.al-guide__card {
+  position: fixed;
+  z-index: 10002;
+  width: 360px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+  max-width: calc(100vw - 48px);
+
+  &--center {
+    position: relative;
+  }
+}
+
+.al-guide__step-indicator {
+  font-size: 12px;
+  font-weight: 600;
+  color: #86868b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.al-guide__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.al-guide__content {
+  font-size: 14px;
+  color: #3a3a3c;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.al-guide__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+
+  &--center {
+    justify-content: center;
+  }
+}
+
+.al-guide__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: inherit;
+
+  &--skip {
+    color: #86868b;
+    background: transparent;
+    margin-right: auto;
+
+    &:hover {
+      background: #f5f5f7;
+    }
+  }
+
+  &--prev {
+    color: #1d1d1f;
+    background: #f5f5f7;
+
+    &:hover {
+      background: #e5e5ea;
+    }
+  }
+
+  &--next {
+    color: #fff;
+    background: #1d1d1f;
+
+    &:hover {
+      background: #000;
+    }
+  }
+}

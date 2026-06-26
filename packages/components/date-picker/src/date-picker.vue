@@ -390,8 +390,8 @@ function selectDay(day: { date: Date }) {
     } else {
       const start = parseDate(arr[0])!
       if (day.date < start) {
-        arr[0] = formatDate(day.date)
         arr[1] = arr[0]
+        arr[0] = formatDate(day.date)
       } else {
         arr[1] = formatDate(day.date)
       }

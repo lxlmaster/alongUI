@@ -27,10 +27,6 @@ export const drawerProps = {
     type: Boolean,
     default: true
   },
-  destroyOnClose: {
-    type: Boolean,
-    default: false
-  },
   showClose: {
     type: Boolean,
     default: true
