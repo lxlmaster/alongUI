@@ -7,8 +7,9 @@ const sidebar = {
       text: '指南',
       items: [
         { text: '快速开始', link: '/guide/getting-started' },
-        { text: '主题定制', link: '/guide/theme' },
-        { text: '从 Element Plus 迁移', link: '/guide/migration' },
+        { text: '安装', link: '/guide/installation' },
+        { text: '主题定制', link: '/guide/theming' },
+        { text: '迁移指南', link: '/guide/migration' },
       ]
     }
   ],
