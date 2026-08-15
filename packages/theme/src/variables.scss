@@ -25,6 +25,8 @@
   --al-color-primary-hover: #3395ff;
   --al-color-primary-light: #e8f2ff;
   --al-color-primary-dark: #0055cc;
+  /* focus-visible 微光环：主色低透明度，Apple 式低调高亮 */
+  --al-focus-ring: rgba(0, 122, 255, 0.25);
   --al-color-success: #34c759;
   --al-color-success-hover: #2db84e;
   --al-color-warning: #ff9500;
