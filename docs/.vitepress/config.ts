@@ -55,6 +55,8 @@ const sidebar = {
         { text: 'Descriptions 描述列表', link: '/components/descriptions' },
         { text: 'Empty 空状态', link: '/components/empty' },
         { text: 'Skeleton 骨架屏', link: '/components/skeleton' },
+        { text: 'Timeline 时间线', link: '/components/timeline' },
+        { text: 'InfiniteScroll 无限滚动', link: '/components/infinite-scroll' },
         { text: 'Calendar 日历', link: '/components/calendar' },
         { text: 'Image 图片', link: '/components/image' },
         { text: 'Carousel 走马灯', link: '/components/carousel' },
@@ -74,6 +76,7 @@ const sidebar = {
         { text: 'Dropdown 下拉菜单', link: '/components/dropdown' },
         { text: 'Tooltip 文字提示', link: '/components/tooltip' },
         { text: 'Loading 加载', link: '/components/loading' },
+        { text: 'Result 结果', link: '/components/result' },
       ]
     },
     {
@@ -105,6 +108,7 @@ const sidebar = {
       items: [
         { text: 'Avatar 头像', link: '/components/avatar' },
         { text: 'Card 卡片', link: '/components/card' },
+        { text: 'Guide 引导', link: '/components/guide' },
         { text: 'Affix 固钉', link: '/components/affix' },
         { text: 'BackTop 回到顶部', link: '/components/backtop' },
         { text: 'ColorPicker 颜色选择', link: '/components/color-picker' },
