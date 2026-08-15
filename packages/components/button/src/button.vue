@@ -37,8 +37,6 @@ const buttonRef = ref<HTMLButtonElement>()
 
 const buttonDisabled = computed(() => props.disabled || props.loading)
 
-const isLinkType = computed(() => props.type === 'link' || props.type === 'danger')
-
 const buttonClasses = computed(() => [
   `al-button--${props.type}`,
   `al-button--${props.size}`,
