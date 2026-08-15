@@ -2,6 +2,9 @@
   "name": "@along-ui/components",
   "version": "0.0.0",
   "type": "module",
+  "scripts": {
+    "build": "vite build -c ../../internal/build/vite.components.config.ts"
+  },
   "main": "index.ts",
   "module": "index.ts",
   "types": "index.ts",

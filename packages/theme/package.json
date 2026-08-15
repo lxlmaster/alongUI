@@ -2,6 +2,9 @@
   "name": "@along-ui/theme",
   "version": "0.0.0",
   "type": "module",
+  "scripts": {
+    "build": "vite build -c ../../internal/build/vite.theme.config.ts"
+  },
   "main": "src/index.scss",
   "style": "src/index.scss",
   "exports": {

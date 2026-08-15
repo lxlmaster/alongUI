@@ -6,6 +6,9 @@ node_modules/
 dist/
 build/
 coverage/
+# internal/build 是构建配置源码目录，不是构建产物，必须放行
+!internal/build/
+!internal/build/**
 
 # Logs
 *.log
