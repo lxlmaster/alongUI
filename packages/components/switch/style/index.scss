@@ -31,14 +31,14 @@
   width: 44px;
   height: 24px;
   border-radius: var(--al-border-radius-round);
-  background: #e9e9ea;
+  background: var(--al-border-color-light);
   transition:
     background-color var(--al-transition-duration-fast) var(--al-transition-function),
     box-shadow var(--al-transition-duration-fast) var(--al-transition-function);
 }
 
 .al-switch:not(.is-disabled):hover .al-switch__track {
-  background: #dddde0;
+  background: var(--al-border-color);
 }
 
 .al-switch.is-checked .al-switch__track {
