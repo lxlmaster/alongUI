@@ -81,7 +81,7 @@ const props = withDefaults(defineProps<{
 }>(), {
   modelValue: false,
   title: '',
-  width: '520px',
+  width: '400px',
   fullscreen: false,
   top: '15vh',
   closeOnClickModal: true,
@@ -119,6 +119,7 @@ const dialogStyle = computed(() => {
   if (!props.fullscreen) {
     style.width = typeof props.width === 'number' ? `${props.width}px` : props.width
     style.marginTop = props.top
+    style.borderRadius = 'var(--al-border-radius-large)'
   }
 
   if (props.draggable && (offsetX.value !== 0 || offsetY.value !== 0)) {
@@ -223,3 +224,29 @@ function getNextZIndex(): string {
   return String(++zIndexCounter)
 }
 </script>
+
+<style scoped>
+/* iOS Alert 风格的底部按钮区：
+   用顶部分隔线（border-top）分隔，按钮之间加竖直分隔，
+   取代 Element 式的 footer 内边距/右对齐布局。 */
+.al-dialog__footer {
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  margin-top: 16px;
+  border-top: 1px solid var(--al-border-color-light, #e5e5ea);
+}
+
+.al-dialog__footer > * {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  min-height: 44px;
+  border-left: 1px solid var(--al-border-color-light, #e5e5ea);
+}
+
+.al-dialog__footer > *:first-child {
+  border-left: none;
+}
+</style>
