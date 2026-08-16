@@ -61,10 +61,8 @@ describe('AlUpload', () => {
   it('opens the file dialog on trigger click', async () => {
     const wrapper = mount(AlUpload)
 
-    const clickSpy = vi.spyOn(
-      wrapper.find('input[type="file"]').element,
-      'click'
-    )
+    const input = wrapper.find('input[type="file"]').element as HTMLInputElement
+    const clickSpy = vi.spyOn(input, 'click')
 
     await wrapper.find('.al-upload__trigger').trigger('click')
 

@@ -21,11 +21,14 @@ describe('AlPopover', () => {
     expect(wrapper.classes()).toContain('al-popover--bottom')
   })
 
-  it('renders content from prop', () => {
+  it('renders content from prop', async () => {
     const wrapper = mount(AlPopover, {
       props: { content: 'Hello' },
       slots: { reference: 'Trigger' }
     })
+
+    // 面板只在展开后渲染，先点开触发器再断言 content
+    await wrapper.find('.al-popover__trigger').trigger('click')
 
     expect(wrapper.text()).toContain('Hello')
   })

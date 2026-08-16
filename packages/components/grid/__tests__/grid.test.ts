@@ -19,6 +19,7 @@ describe('AlGrid', () => {
       }
     })
 
-    expect(wrapper.findAll('div')).toHaveLength(2)
+    // 根元素 .al-grid 本身就是 div，findAll('div') 会把它算进去，这里只统计直接子节点
+    expect(wrapper.findAll('.al-grid > div')).toHaveLength(2)
   })
 })
