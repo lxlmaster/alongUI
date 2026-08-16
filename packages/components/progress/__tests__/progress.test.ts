@@ -25,7 +25,8 @@ describe('AlProgress', () => {
       props: { percentage: 30, strokeColor: '#ff0000' }
     })
 
-    expect(wrapper.find('.al-progress__bar-inner').attributes('style')).toContain('#ff0000')
+    // JSDOM 会把内联样式里的十六进制颜色归一化成 rgb()
+    expect(wrapper.find('.al-progress__bar-inner').attributes('style')).toContain('rgb(255, 0, 0)')
   })
 
   it('renders circle type and reflects type class', () => {
