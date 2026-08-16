@@ -1,4 +1,5 @@
-import { describe, expect, it, afterEach } from 'vitest'
+import { describe, expect, it, afterEach, vi } from 'vitest'
+import { nextTick } from 'vue'
 import { mount, flushPromises } from '@vue/test-utils'
 import { Message } from '../index'
 import MessageVue from '../src/message.vue'
@@ -18,7 +19,7 @@ describe('AlMessage', () => {
     expect(el!.classList.contains('al-message--success')).toBe(true)
   })
 
-  it('reflects type / showClose props (component form)', () => {
+  it('reflects type / showClose props (component form)', async () => {
     const wrapper = mount(MessageVue, {
       props: {
         message: 'Warn content',
@@ -27,6 +28,8 @@ describe('AlMessage', () => {
         duration: 0
       }
     })
+    // visible 在 onMounted 里才置 true，需等一次渲染
+    await nextTick()
 
     const el = wrapper.find('.al-message')
     expect(el.exists()).toBe(true)
@@ -42,8 +45,10 @@ describe('AlMessage', () => {
     expect(document.querySelector('.al-message')).not.toBeNull()
 
     handler.close()
-    await flushPromises()
 
-    expect(document.querySelector('.al-message')).toBeNull()
+    // DOM 在 transition 的 after-leave 之后才移除，用轮询等待而不是固定 sleep
+    await vi.waitFor(() => {
+      expect(document.querySelector('.al-message')).toBeNull()
+    })
   })
 })

@@ -21,7 +21,7 @@ describe('AlMessageBox', () => {
   })
 
   it('reflects title / content / type / showInput props (component form)', () => {
-    const wrapper = mount(MessageBoxVue, {
+    mount(MessageBoxVue, {
       props: {
         visible: true,
         title: 'Confirm',
@@ -33,14 +33,17 @@ describe('AlMessageBox', () => {
       }
     })
 
-    const el = wrapper.find('.al-message-box')
-    expect(el.exists()).toBe(true)
-    expect(el.classes()).toContain('al-message-box--prompt')
-    expect(wrapper.find('.al-message-box__title').text()).toBe('Confirm')
-    expect(wrapper.find('.al-message-box__message').text()).toBe('Delete this item?')
-    expect(wrapper.find('.al-message-box__status--warning').exists()).toBe(true)
-    expect(wrapper.find('.al-message-box__input').exists()).toBe(true)
-    expect((wrapper.find('.al-message-box__input').element as HTMLInputElement).value).toBe('abc')
+    // 组件用 <Teleport to="body">，内容不在 wrapper 子树里，只能从 document 查
+    const el = document.querySelector('.al-message-box')
+    expect(el).not.toBeNull()
+    expect(el!.classList.contains('al-message-box--prompt')).toBe(true)
+    expect(document.querySelector('.al-message-box__title')?.textContent).toBe('Confirm')
+    expect(document.querySelector('.al-message-box__message')?.textContent).toBe('Delete this item?')
+    expect(document.querySelector('.al-message-box__status--warning')).not.toBeNull()
+
+    const input = document.querySelector('.al-message-box__input') as HTMLInputElement | null
+    expect(input).not.toBeNull()
+    expect(input!.value).toBe('abc')
   })
 
   it('emits confirm when the confirm button is clicked (interaction)', async () => {
@@ -51,7 +54,10 @@ describe('AlMessageBox', () => {
       }
     })
 
-    await wrapper.find('.al-message-box__btn--confirm').trigger('click')
+    const btn = document.querySelector('.al-message-box__btn--confirm') as HTMLElement | null
+    expect(btn).not.toBeNull()
+    btn!.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    await flushPromises()
 
     expect(wrapper.emitted('confirm')).toHaveLength(1)
   })
@@ -65,7 +71,10 @@ describe('AlMessageBox', () => {
       }
     })
 
-    await wrapper.find('.al-message-box__btn--cancel').trigger('click')
+    const btn = document.querySelector('.al-message-box__btn--cancel') as HTMLElement | null
+    expect(btn).not.toBeNull()
+    btn!.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    await flushPromises()
 
     expect(wrapper.emitted('cancel')).toHaveLength(1)
   })

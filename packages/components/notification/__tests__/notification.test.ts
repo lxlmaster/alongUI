@@ -1,4 +1,5 @@
-import { describe, expect, it, afterEach } from 'vitest'
+import { describe, expect, it, afterEach, vi } from 'vitest'
+import { nextTick } from 'vue'
 import { mount, flushPromises } from '@vue/test-utils'
 import { Notification } from '../index'
 import NotificationVue from '../src/notification.vue'
@@ -18,8 +19,8 @@ describe('AlNotification', () => {
     expect(el!.classList.contains('al-notification--success')).toBe(true)
   })
 
-  it('reflects title / type / showClose props (component form)', () => {
-    const wrapper = mount(NotificationVue, {
+  it('reflects title / type / showClose props (component form)', async () => {
+    mount(NotificationVue, {
       props: {
         title: 'Title here',
         message: 'Msg here',
@@ -28,26 +29,33 @@ describe('AlNotification', () => {
         duration: 0
       }
     })
+    // 组件用 <Teleport to="body">，且 visible 在 onMounted 才置 true
+    await nextTick()
 
-    const el = wrapper.find('.al-notification')
-    expect(el.exists()).toBe(true)
-    expect(el.classes()).toContain('al-notification--error')
-    expect(wrapper.find('.al-notification__title').text()).toBe('Title here')
-    expect(wrapper.find('.al-notification__close').exists()).toBe(true)
+    const el = document.querySelector('.al-notification')
+    expect(el).not.toBeNull()
+    expect(el!.classList.contains('al-notification--error')).toBe(true)
+    expect(document.querySelector('.al-notification__title')?.textContent).toBe('Title here')
+    expect(document.querySelector('.al-notification__close')).not.toBeNull()
   })
 
   it('removes the DOM after the close button is clicked (interaction)', async () => {
-    const wrapper = mount(NotificationVue, {
+    mount(NotificationVue, {
       props: {
         message: 'Closable notification',
         showClose: true,
         duration: 0
       }
     })
+    await nextTick()
 
-    await wrapper.find('.al-notification__close').trigger('click')
-    await flushPromises()
+    const closeBtn = document.querySelector('.al-notification__close') as HTMLElement | null
+    expect(closeBtn).not.toBeNull()
+    closeBtn!.dispatchEvent(new MouseEvent('click', { bubbles: true }))
 
-    expect(document.querySelector('.al-notification')).toBeNull()
+    // DOM 在 transition 的 after-leave 之后才移除
+    await vi.waitFor(() => {
+      expect(document.querySelector('.al-notification')).toBeNull()
+    })
   })
 })
