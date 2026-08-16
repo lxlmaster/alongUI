@@ -18,6 +18,7 @@
     "test:watch": "vitest"
   },
   "devDependencies": {
+    "@types/node": "^20.14.0",
     "@vitejs/plugin-vue": "^5.2.0",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^9.0.0",
